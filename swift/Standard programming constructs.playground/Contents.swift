@@ -47,6 +47,34 @@ default:
     print("Def value")
 }
 
+// --- Loops
+
+// for
+for i in 1...5{
+    print(i)
+}
+// 10 to 20  by 5 increments
+for x in stride(from: 10, through: 20, by: 5) {
+    print(x)
+}
+
+// 10 to 20.5 with 5 decreases
+for x in stride(from: 20, through: 10, by: -5) {
+    print(x)
+}
+
+// while
+
+var counter = 0
+
+while 10>counter {
+    print(counter)
+    counter += 1
+}
+
+
+
+
 
 
 
