@@ -42,4 +42,62 @@ print("Execute Status : \(bmw.isRun!)")
 
 bmw.write()
 
+class Functions{
+    func sayHello(){
+        let result = "Hello ahmet !"
+        print(result)
+    }
+    func sayHello1() ->String {
+        return "Hello ahmet !"
+    }
+    func sayHello2(name:String){
+        print(name)
+    }
+    
+    func addition (){
+        let result = 10 + 5
+        print(result)
+        }
+    
+    func addition2 () ->Int{
+            let result = 10 + 5
+            return result
+        }
+    
+    func addition1 (num1:Int,num2:Int)->Int{
+        return num1+num2
+    }
+}
+
+var f = Functions()
+
+f.sayHello()
+print(f.sayHello1())
+f.sayHello2(name: "Hello ahmet !")
+
+f.addition()
+print(f.addition2())
+print(f.addition1(num1: 5, num2: 10))
+
+// Overloading
+
+class Calculator{
+    func addition(num1:Int,num2:Int){
+        print("Result : \(num1+num2)")
+    }
+    func addition(num1:Double,num2:Int){
+            print("Result : \(num1+Double(num2))")
+    }
+    func addition(num1:Int,num2:Double){
+                print("Result : \(Double(num1)+num2)")
+    }
+    func addition(num1:Int,num2:Int,message:String){
+            print("\(message) : \(num1+num2)")
+        }
+}
+
+var c = Calculator()
+c.addition(num1: 100, num2: 200, message: "Cemal")
+
+
 
