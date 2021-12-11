@@ -107,6 +107,12 @@ extension Int {
     }
 }
 
+// --- Closure
+let sample = {
+    print("this structure like function")
+}
+sample()
+
 
 
 
