@@ -83,6 +83,19 @@ for i in s1{
     print(i.name!)
 }
 
+// --- Set
+var fruits1 = Set<String>()
+fruits1.insert("Apricot")
+fruits1.insert("Banana")
+fruits1.insert("Apple")
+fruits1.insert("Banana")
+fruits1.insert("Cherry")
+print(fruits1)
+fruits1.insert("Apple") // You can't insert the same element
+
+// --- Dictionary
+
+
 
 
 
