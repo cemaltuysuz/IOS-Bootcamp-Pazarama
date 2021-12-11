@@ -94,6 +94,14 @@ print(fruits1)
 fruits1.insert("Apple") // You can't insert the same element
 
 // --- Dictionary
+var countries = [Int:String]()
+countries[1] = "Turkey"
+countries[2] = "Germany"
+countries[3] = "America"
+
+for (key,value) in countries{
+    print("Key : \(key) | Value : \(value)")
+}
 
 
 
