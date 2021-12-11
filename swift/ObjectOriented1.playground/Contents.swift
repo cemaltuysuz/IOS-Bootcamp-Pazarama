@@ -99,5 +99,25 @@ class Calculator{
 var c = Calculator()
 c.addition(num1: 100, num2: 200, message: "Cemal")
 
+// ---- Enum
+
+enum GlassSize{
+    case small
+    case middle
+    case large
+}
+
+func calculatePrice(size:GlassSize,num:Int){
+    switch size {
+    case .small:
+        print("Price : \(num*10)")
+    case .middle:
+        print("Price : \(num*20)")
+    case .large:
+        print("Price : \(num*30)")
+  }
+}
+
+calculatePrice(size: .large, num: 20)
 
 
