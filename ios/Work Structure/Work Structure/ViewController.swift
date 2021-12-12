@@ -23,5 +23,20 @@ class ViewController: UIViewController {
         myLabel.text = String(count)
     }
     
+    @IBAction func startButton(_ sender: Any) {
+        performSegue(withIdentifier: "homeToGameSC", sender: "Hello")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeToGameSC" {
+            print("Go to game screen")
+            
+            if let data = sender as? String {
+                print(data)
+                let targetVC = segue.destination as! GameScreen
+                targetVC.message = data
+            }
+        }
+    }
 }
 
