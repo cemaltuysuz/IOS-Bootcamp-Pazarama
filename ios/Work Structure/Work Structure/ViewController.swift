@@ -15,7 +15,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("DidLoad is runned")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        print("Will Appear is runned")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear is runned")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("viewWillDisappear is runned")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear is runned")
     }
 
     @IBAction func myButton(_ sender: Any) {
