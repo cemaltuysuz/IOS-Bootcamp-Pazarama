@@ -50,7 +50,9 @@
                             <constraint firstItem="oTP-ww-VN0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="cDE-1R-SSr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="HomePage" id="u8c-XJ-IHz"/>
+                    <navigationItem key="navigationItem" title="HomePage" id="u8c-XJ-IHz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" style="plain" id="WJC-J8-wx8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myLabel" destination="oTP-ww-VN0" id="fpJ-JK-ntW"/>
                         <segue destination="2z9-ui-ODY" kind="show" identifier="homeToGameSC" id="JxH-45-HiK"/>
@@ -167,6 +169,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
