@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Meat lover , get ready to meet your pizza !"; ObjectID = "05O-m4-m1r"; */
+"05O-m4-m1r.text" = "Et sever, Pizzan ile tanışmaya hazırlan !";
+
+/* Class = "UILabel"; text = "$ 5.98"; ObjectID = "2Iv-ko-vwQ"; */
+"2Iv-ko-vwQ.text" = "₺ 104.00";
+
+/* Class = "UILabel"; text = "20 min"; ObjectID = "8nx-2Z-0vq"; */
+"8nx-2Z-0vq.text" = "20 dakika";
+
+/* Class = "UIButton"; normalTitle = "Pepper"; ObjectID = "ZOc-bl-Asn"; */
+"ZOc-bl-Asn.normalTitle" = "Biber";
+
+/* Class = "UIButton"; normalTitle = "Cheese"; ObjectID = "lZe-FT-Nwc"; */
+"lZe-FT-Nwc.normalTitle" = "Peynir";
+
+/* Class = "UILabel"; text = "Beef Cheese"; ObjectID = "nIl-i6-RSn"; */
+"nIl-i6-RSn.text" = "Etli Peynirli";
+
+/* Class = "UIButton"; normalTitle = "Sausage"; ObjectID = "ocD-Ho-Ne7"; */
+"ocD-Ho-Ne7.normalTitle" = "Sucuk";
+
+/* Class = "UILabel"; text = "Delivery"; ObjectID = "vKv-qY-HTP"; */
+"vKv-qY-HTP.text" = "Teslimat";
+
+/* Class = "UIButton"; normalTitle = "Add to chart"; ObjectID = "ynP-IW-y3V"; */
+"ynP-IW-y3V.normalTitle" = "Sepete Ekle";
