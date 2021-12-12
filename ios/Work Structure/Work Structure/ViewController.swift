@@ -24,17 +24,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        performSegue(withIdentifier: "homeToGameSC", sender: "Hello")
+        let person = People(personId: 1, personName: "Cemal", personAge: 21, personHeight: 1.76)
+        performSegue(withIdentifier: "homeToGameSC", sender: person)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "homeToGameSC" {
             print("Go to game screen")
             
-            if let data = sender as? String {
+            if let data = sender as? People {
                 print(data)
                 let targetVC = segue.destination as! GameScreen
-                targetVC.message = data
+                targetVC.person = data
             }
         }
     }

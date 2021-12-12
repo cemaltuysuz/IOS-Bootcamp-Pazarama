@@ -9,13 +9,16 @@ import UIKit
 
 class GameScreen: UIViewController {
     
-    var message:String?
+    var person:People?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let m = message{
-            print("Incoming message : \(m)")
+        if let m = person{
+            print("ID : \(m.personId)")
+            print("NAME : \(m.personName)")
+            print("AGE : \(m.personAge)")
+            print("HEIGHT : \(m.personHeight)")
         }
     }
     @IBAction func finishItButton(_ sender: Any) {
