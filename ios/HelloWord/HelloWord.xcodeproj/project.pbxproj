@@ -28,6 +28,8 @@
 		157DAB5C2764E26300EC8BF1 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		158BF200276610E3006F6BD4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		158BF201276610E3006F6BD4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		158E5A8A276D1FD3005BD9B1 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		158E5A8B276D1FD3005BD9B1 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				en,
 				Base,
 				tr,
+				"en-GB",
 			);
 			mainGroup = 157DAB3A2764D6CF00EC8BF1;
 			productRefGroup = 157DAB442764D6CF00EC8BF1 /* Products */;
@@ -166,6 +169,7 @@
 			children = (
 				157DAB4D2764D6CF00EC8BF1 /* Base */,
 				158BF200276610E3006F6BD4 /* tr */,
+				158E5A8A276D1FD3005BD9B1 /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -175,6 +179,7 @@
 			children = (
 				157DAB522764D6D400EC8BF1 /* Base */,
 				158BF201276610E3006F6BD4 /* tr */,
+				158E5A8B276D1FD3005BD9B1 /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

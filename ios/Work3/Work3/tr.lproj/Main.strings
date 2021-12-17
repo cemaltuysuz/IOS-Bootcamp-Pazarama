@@ -1,0 +1,66 @@
+
+/* Class = "UITabBarItem"; title = "Para Transferi"; ObjectID = "1RS-iF-hKg"; */
+"1RS-iF-hKg.title" = "Para Transferi";
+
+/* Class = "UILabel"; text = "Çek"; ObjectID = "50x-ia-zNc"; */
+"50x-ia-zNc.text" = "Çek";
+
+/* Class = "UILabel"; text = "Türk Lirası"; ObjectID = "5ba-FM-GAD"; */
+"5ba-FM-GAD.text" = "Türk Lirası";
+
+/* Class = "UILabel"; text = "Dün 13:27"; ObjectID = "69X-eb-bI7"; */
+"69X-eb-bI7.text" = "Dün 13:27";
+
+/* Class = "UILabel"; text = "Giden Transfer"; ObjectID = "8xE-XQ-QUs"; */
+"8xE-XQ-QUs.text" = "Giden Transfer";
+
+/* Class = "UITabBarItem"; title = "Papara Card"; ObjectID = "AhO-kL-ryt"; */
+"AhO-kL-ryt.title" = "Papara Card";
+
+/* Class = "UILabel"; text = "Hesabında hiç para yok."; ObjectID = "Cft-lf-COI"; */
+"Cft-lf-COI.text" = "Hesabında hiç para yok.";
+
+/* Class = "UILabel"; text = "Yatır"; ObjectID = "J5Q-ak-kh9"; */
+"J5Q-ak-kh9.text" = "Yatır";
+
+/* Class = "UITabBarItem"; title = "Ana Sayfa"; ObjectID = "Ndd-Nv-vA8"; */
+"Ndd-Nv-vA8.title" = "Ana Sayfa";
+
+/* Class = "UILabel"; text = "Cemal Tüysüz"; ObjectID = "Ofh-Cj-n7T"; */
+"Ofh-Cj-n7T.text" = "Cemal Tüysüz";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Rdn-ks-aRg"; */
+"Rdn-ks-aRg.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "₺2.500"; ObjectID = "WmF-tR-Yb8"; */
+"WmF-tR-Yb8.text" = "₺2.500";
+
+/* Class = "UILabel"; text = "Giden Transfer"; ObjectID = "Xxw-xY-wKH"; */
+"Xxw-xY-wKH.text" = "Giden Transfer";
+
+/* Class = "UILabel"; text = "TL    ˇ"; ObjectID = "dpV-lY-i33"; */
+"dpV-lY-i33.text" = "TL    ˇ";
+
+/* Class = "UILabel"; text = "Para yatır ya da para iste."; ObjectID = "eTt-fz-lE3"; */
+"eTt-fz-lE3.text" = "Para yatır ya da para iste.";
+
+/* Class = "UITabBarItem"; title = "Ödemeler"; ObjectID = "eiK-xH-obe"; */
+"eiK-xH-obe.title" = "Ödemeler";
+
+/* Class = "UILabel"; text = "Caner Tüysüz"; ObjectID = "fOW-uz-6oc"; */
+"fOW-uz-6oc.text" = "Caner Tüysüz";
+
+/* Class = "UILabel"; text = "₺0,00"; ObjectID = "gsY-fU-A05"; */
+"gsY-fU-A05.text" = "₺0,00";
+
+/* Class = "UILabel"; text = "SON İŞLEMLER →"; ObjectID = "tQE-KB-RPe"; */
+"tQE-KB-RPe.text" = "SON İŞLEMLER →";
+
+/* Class = "UITabBarItem"; title = "QR İşlemleri"; ObjectID = "y7B-aM-sBU"; */
+"y7B-aM-sBU.title" = "QR İşlemleri";
+
+/* Class = "UILabel"; text = "Dün 22:55"; ObjectID = "zTk-oz-ESN"; */
+"zTk-oz-ESN.text" = "Dün 22:55";
+
+/* Class = "UILabel"; text = "₺1.600"; ObjectID = "zlw-FL-mGc"; */
+"zlw-FL-mGc.text" = "₺1.600";

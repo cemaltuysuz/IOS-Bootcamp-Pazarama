@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         // Person 2
         person2.layer.masksToBounds = true
         person2.layer.cornerRadius = person2.bounds.width / 2
+        
     }
 
 

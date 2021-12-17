@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		159FF77C276A9B5F00A99FD0 /* CrosstenMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 159FF77B276A9B5F00A99FD0 /* CrosstenMedium.otf */; };
+		158E5A89276D1B8A005BD9B1 /* CrosstenBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 158E5A88276D1B8A005BD9B1 /* CrosstenBold.ttf */; };
+		159FF77C276A9B5F00A99FD0 /* CrosstenMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 159FF77B276A9B5F00A99FD0 /* CrosstenMedium.ttf */; };
 		15B247E927691CB10051257A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B247E827691CB10051257A /* AppDelegate.swift */; };
 		15B247EB27691CB10051257A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B247EA27691CB10051257A /* SceneDelegate.swift */; };
 		15B247ED27691CB10051257A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B247EC27691CB10051257A /* ViewController.swift */; };
@@ -17,7 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		159FF77B276A9B5F00A99FD0 /* CrosstenMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrosstenMedium.otf; sourceTree = "<group>"; };
+		158E5A88276D1B8A005BD9B1 /* CrosstenBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrosstenBold.ttf; sourceTree = "<group>"; };
+		158E5A8C276D2020005BD9B1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		158E5A8D276D2020005BD9B1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		159FF77B276A9B5F00A99FD0 /* CrosstenMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrosstenMedium.ttf; sourceTree = "<group>"; };
 		15B247E527691CB10051257A /* Work3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Work3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B247E827691CB10051257A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15B247EA27691CB10051257A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +46,8 @@
 		159FF77A276A9AD500A99FD0 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				159FF77B276A9B5F00A99FD0 /* CrosstenMedium.otf */,
+				158E5A88276D1B8A005BD9B1 /* CrosstenBold.ttf */,
+				159FF77B276A9B5F00A99FD0 /* CrosstenMedium.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 15B247DC27691CB10051257A;
 			productRefGroup = 15B247E627691CB10051257A /* Products */;
@@ -135,10 +141,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158E5A89276D1B8A005BD9B1 /* CrosstenBold.ttf in Resources */,
 				15B247F527691CB50051257A /* LaunchScreen.storyboard in Resources */,
 				15B247F227691CB50051257A /* Assets.xcassets in Resources */,
 				15B247F027691CB10051257A /* Main.storyboard in Resources */,
-				159FF77C276A9B5F00A99FD0 /* CrosstenMedium.otf in Resources */,
+				159FF77C276A9B5F00A99FD0 /* CrosstenMedium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +169,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				15B247EF27691CB10051257A /* Base */,
+				158E5A8C276D2020005BD9B1 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				15B247F427691CB50051257A /* Base */,
+				158E5A8D276D2020005BD9B1 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -181,6 +190,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -242,6 +252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
