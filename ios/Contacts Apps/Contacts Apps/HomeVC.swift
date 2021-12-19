@@ -70,9 +70,27 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let kisi = personList[indexPath.row]
-        print("\(kisi.kisi_ad!) - \(kisi.kisi_tel!)")
         tableView.deselectRow(at: indexPath, animated: true)
+        let kisi = personList[indexPath.row]
+        performSegue(withIdentifier: "toDetay", sender: kisi)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil"){(contextualAction,view,bool) in
+            let kisi = self.personList[indexPath.row]
+            let alert = UIAlertController(title: "Silme işlemi", message: "\(kisi.kisi_ad!) silinsin mi ?", preferredStyle: .alert)
+           
+            let iptalAction = UIAlertAction(title: "İptal", style: .cancel){ _ in
+            }
+            
+            let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in
+                print("Silindi \(kisi.kisi_ad) .")
+            }
+            alert.addAction(iptalAction)
+            alert.addAction(evetAction)
+            self.present(alert,animated: true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
 }
