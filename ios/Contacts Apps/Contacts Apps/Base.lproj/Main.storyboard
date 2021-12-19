@@ -24,11 +24,18 @@
                                     <action selector="denemeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hh4-zX-4IS"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hQx-zf-jl0">
+                                <rect key="frame" x="0.0" y="140" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hQx-zf-jl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2OR-CB-xt0"/>
+                            <constraint firstItem="hQx-zf-jl0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4no-92-LTp"/>
                             <constraint firstItem="hZJ-yh-ckf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Djd-Gj-KVW"/>
+                            <constraint firstItem="hQx-zf-jl0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hcd-yj-8AG"/>
                             <constraint firstItem="hZJ-yh-ckf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QgF-jX-92X"/>
                         </constraints>
                     </view>
@@ -40,6 +47,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="hQx-zf-jl0" id="p4U-Rn-FJW"/>
                         <segue destination="wg0-5C-rOQ" kind="show" identifier="toDetay" id="kYd-uQ-qY7"/>
                     </connections>
                 </viewController>

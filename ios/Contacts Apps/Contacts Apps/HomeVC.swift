@@ -9,8 +9,12 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
 
     }
     @IBAction func denemeButton(_ sender: Any) {
@@ -26,5 +30,10 @@ class HomeVC: UIViewController {
             targetVC.kisi = kisi
         }
     }
-    
+}
+
+extension HomeVC : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Arama sonucu : \(searchText)")
+    }
 }
