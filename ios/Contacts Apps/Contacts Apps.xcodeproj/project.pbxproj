@@ -19,6 +19,7 @@
 		152C9076276E0D3A005D334F /* PersonRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */; };
 		152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9077276E0D4D005D334F /* PersonDetailsVC.swift */; };
 		152C907A276E1022005D334F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9079276E1022005D334F /* Person.swift */; };
+		15B32586276F523900E6C54C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B32585276F523900E6C54C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrationVC.swift; sourceTree = "<group>"; };
 		152C9077276E0D4D005D334F /* PersonDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsVC.swift; sourceTree = "<group>"; };
 		152C9079276E1022005D334F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		15B32585276F523900E6C54C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				152C9043276E0C2B005D334F /* AppDelegate.swift */,
 				152C9045276E0C2B005D334F /* SceneDelegate.swift */,
 				152C9049276E0C2B005D334F /* Main.storyboard */,
+				15B32585276F523900E6C54C /* TableViewCell.swift */,
 				152C904C276E0C2C005D334F /* Assets.xcassets */,
 				152C904E276E0C2C005D334F /* LaunchScreen.storyboard */,
 				152C9051276E0C2C005D334F /* Info.plist */,
@@ -272,6 +275,7 @@
 				152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */,
 				152C9074276E0C50005D334F /* HomeVC.swift in Sources */,
 				152C9044276E0C2B005D334F /* AppDelegate.swift in Sources */,
+				15B32586276F523900E6C54C /* TableViewCell.swift in Sources */,
 				152C9046276E0C2B005D334F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

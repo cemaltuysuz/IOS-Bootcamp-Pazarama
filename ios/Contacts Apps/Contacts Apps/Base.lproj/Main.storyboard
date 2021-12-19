@@ -16,27 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-yh-ckf">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="denemeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hh4-zX-4IS"/>
-                                </connections>
-                            </button>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hQx-zf-jl0">
                                 <rect key="frame" x="0.0" y="140" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qBf-iF-DHf">
+                                <rect key="frame" x="0.0" y="191" width="414" height="671"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personCell" id="ITx-Bv-meQ" customClass="TableViewCell" customModule="Contacts_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ITx-Bv-meQ" id="Ktt-na-a2Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-9J-Hhk">
+                                                    <rect key="frame" x="186" y="40" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BXp-9J-Hhk" firstAttribute="centerY" secondItem="Ktt-na-a2Y" secondAttribute="centerY" id="FSH-TO-cVp"/>
+                                                <constraint firstItem="BXp-9J-Hhk" firstAttribute="centerX" secondItem="Ktt-na-a2Y" secondAttribute="centerX" id="iCp-zp-mmp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="BXp-9J-Hhk" id="rWG-wT-ut5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hQx-zf-jl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2OR-CB-xt0"/>
                             <constraint firstItem="hQx-zf-jl0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4no-92-LTp"/>
-                            <constraint firstItem="hZJ-yh-ckf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Djd-Gj-KVW"/>
                             <constraint firstItem="hQx-zf-jl0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hcd-yj-8AG"/>
-                            <constraint firstItem="hZJ-yh-ckf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QgF-jX-92X"/>
+                            <constraint firstItem="qBf-iF-DHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QpP-h4-BAN"/>
+                            <constraint firstItem="qBf-iF-DHf" firstAttribute="top" secondItem="hQx-zf-jl0" secondAttribute="bottom" id="nsq-O9-K2q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qBf-iF-DHf" secondAttribute="bottom" id="qYp-S8-XAh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qBf-iF-DHf" secondAttribute="trailing" id="w7K-Np-vSf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="8Io-jv-lZn">
@@ -47,6 +70,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contactsTableView" destination="qBf-iF-DHf" id="sdb-wp-8Lj"/>
                         <outlet property="searchBar" destination="hQx-zf-jl0" id="p4U-Rn-FJW"/>
                         <segue destination="wg0-5C-rOQ" kind="show" identifier="toDetay" id="kYd-uQ-qY7"/>
                     </connections>
