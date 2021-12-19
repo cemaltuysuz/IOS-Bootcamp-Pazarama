@@ -84,7 +84,7 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource{
             }
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in
-                print("Silindi \(kisi.kisi_ad) .")
+                print("Silindi \(kisi.kisi_ad!).")
             }
             alert.addAction(iptalAction)
             alert.addAction(evetAction)
