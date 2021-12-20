@@ -18,6 +18,7 @@
 		155F4E2C2770FE500075F8E5 /* CollectionViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F4E2B2770FE500075F8E5 /* CollectionViewUITestsLaunchTests.swift */; };
 		155F4E39277100240075F8E5 /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F4E38277100240075F8E5 /* CountryCollectionViewCell.swift */; };
 		155F4E3B277100E20075F8E5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F4E3A277100E20075F8E5 /* Country.swift */; };
+		155F4E3D277113380075F8E5 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F4E3C277113380075F8E5 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		155F4E2B2770FE500075F8E5 /* CollectionViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		155F4E38277100240075F8E5 /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
 		155F4E3A277100E20075F8E5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		155F4E3C277113380075F8E5 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				155F4E0A2770FE4F0075F8E5 /* SceneDelegate.swift */,
 				155F4E0C2770FE4F0075F8E5 /* ViewController.swift */,
 				155F4E0E2770FE4F0075F8E5 /* Main.storyboard */,
+				155F4E3C277113380075F8E5 /* DetailVC.swift */,
 				155F4E3A277100E20075F8E5 /* Country.swift */,
 				155F4E38277100240075F8E5 /* CountryCollectionViewCell.swift */,
 				155F4E112770FE500075F8E5 /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 				155F4E092770FE4F0075F8E5 /* AppDelegate.swift in Sources */,
 				155F4E3B277100E20075F8E5 /* Country.swift in Sources */,
 				155F4E0B2770FE4F0075F8E5 /* SceneDelegate.swift in Sources */,
+				155F4E3D277113380075F8E5 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

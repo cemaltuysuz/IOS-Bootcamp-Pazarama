@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MIQ-9K-Kca">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MIQ-9K-Kca">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Tl-3E-hh3">
                                     <size key="itemSize" width="128" height="128"/>
@@ -35,16 +36,30 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHu-uG-3Nw">
-                                                    <rect key="frame" x="27" y="52" width="74.5" height="24"/>
+                                                    <rect key="frame" x="27" y="36" width="74.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nO-dX-LMx">
+                                                    <rect key="frame" x="31.5" y="68" width="65" height="31"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Select">
+                                                        <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="selectButton:" destination="qnM-hf-iqp" eventType="touchUpInside" id="gXr-xG-1EI"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                             <constraints>
-                                                <constraint firstItem="rHu-uG-3Nw" firstAttribute="centerX" secondItem="43b-tm-Wax" secondAttribute="centerX" id="G4i-83-ENq"/>
-                                                <constraint firstItem="rHu-uG-3Nw" firstAttribute="centerY" secondItem="43b-tm-Wax" secondAttribute="centerY" id="gCZ-Zr-iag"/>
+                                                <constraint firstItem="2nO-dX-LMx" firstAttribute="top" secondItem="rHu-uG-3Nw" secondAttribute="bottom" constant="8" symbolic="YES" id="4V4-qw-FaB"/>
+                                                <constraint firstItem="2nO-dX-LMx" firstAttribute="centerX" secondItem="43b-tm-Wax" secondAttribute="centerX" id="Kzh-nD-esF"/>
+                                                <constraint firstItem="rHu-uG-3Nw" firstAttribute="top" secondItem="43b-tm-Wax" secondAttribute="top" constant="36" id="X9S-Nf-tNS"/>
+                                                <constraint firstItem="rHu-uG-3Nw" firstAttribute="leading" secondItem="43b-tm-Wax" secondAttribute="leading" constant="27" id="l2J-7j-G3E"/>
+                                                <constraint firstAttribute="trailing" secondItem="rHu-uG-3Nw" secondAttribute="trailing" constant="26.5" id="q8B-4h-DZ8"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -56,16 +71,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="MIQ-9K-Kca" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Cv-lK-XwI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MIQ-9K-Kca" secondAttribute="trailing" id="3eH-d1-dEP"/>
-                            <constraint firstItem="MIQ-9K-Kca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O79-Yl-I5x"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MIQ-9K-Kca" secondAttribute="bottom" id="xVL-RL-AH2"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Countries" id="bNj-rP-0JG"/>
                     <connections>
                         <outlet property="countrieCollectionView" destination="MIQ-9K-Kca" id="hpf-2y-kme"/>
+                        <segue destination="NJG-Mh-jIH" kind="show" identifier="toDetails" id="D2E-5S-ygQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,6 +100,59 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
         </scene>
+        <!--DetailVC-->
+        <scene sceneID="ftd-Pr-gnW">
+            <objects>
+                <viewController id="NJG-Mh-jIH" customClass="DetailVC" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXj-v8-vK3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Bk0-jO-ui1">
+                                <rect key="frame" x="101.5" y="360.5" width="211" height="175"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7se-t1-py1">
+                                        <rect key="frame" x="0.0" y="0.0" width="211" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-Pn-KO2">
+                                        <rect key="frame" x="0.0" y="78" width="211" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYJ-Ti-KQM">
+                                        <rect key="frame" x="0.0" y="128.5" width="211" height="46.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Visa Application">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="VisaButton:" destination="NJG-Mh-jIH" eventType="touchUpInside" id="MeC-CH-sJP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uaf-tJ-ezu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bk0-jO-ui1" firstAttribute="centerX" secondItem="gXj-v8-vK3" secondAttribute="centerX" id="PUs-wi-cBC"/>
+                            <constraint firstItem="Bk0-jO-ui1" firstAttribute="centerY" secondItem="gXj-v8-vK3" secondAttribute="centerY" id="v6P-X6-pJI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CVP-Ci-bwE"/>
+                    <connections>
+                        <outlet property="countryDetailCapital" destination="HQY-Pn-KO2" id="XnN-nH-jSM"/>
+                        <outlet property="countryDetailTitle" destination="7se-t1-py1" id="GQy-Ta-de6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGg-0Z-r8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="84"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
@@ -97,6 +160,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -47,7 +47,12 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource, CollectionCellProtocol {
+    func onClick(indexpath: IndexPath) {
+        let country = countriesList[indexpath.row]
+        print("Clicked : \(country.countryName!)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return countriesList.count
     }
@@ -57,10 +62,26 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath) as! CountryCollectionViewCell
         
         cell.countryLabel.text = country.countryName!
+        cell.layer.cornerRadius = 10
+        
+        cell.collectionCellProtocol = self
+        cell.indexPath = indexPath
+        
         return cell
         
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let country = countriesList[indexPath.row]
+        performSegue(withIdentifier: "toDetails", sender: country)
+        print("Selected : \(country.countryName!)")
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetails" {
+            let country = sender as? Country
+            let targetVC = segue.destination as! DetailVC
+            targetVC.country = country
+        }
+    }
 }
 
