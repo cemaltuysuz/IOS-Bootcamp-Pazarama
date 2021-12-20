@@ -35,7 +35,13 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController:UITableViewDelegate,UITableViewDataSource{
+extension ViewController:UITableViewDelegate,UITableViewDataSource,CellProtocol{
+    
+    func buttonOnClick(indexPath: IndexPath) {
+        let product = productList[indexPath.row]
+        print(print("Selectedd : \(product.productName!)"))
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productList.count
     }
@@ -51,9 +57,32 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         cell.productTitle.text = product.productName!
         cell.productPrice.text = "\(product.productPrice!)₺"
         
+        cell.cellProtocol = self
+        cell.indexPath = indexPath
+        
+        cell.backgroundColor = UIColor(white: 0.90, alpha: 1)
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = productList[indexPath.row]
+        print("Selected : \(product.productName!)")
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let product = productList[indexPath.row]
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){(contextualAction,view,bool) in
+            print("Delete \(product.productName!)")
+        }
+        
+        let updateAction = UIContextualAction(style: .normal, title: "Update"){(contextualAction,view,bool) in
+            print("Update \(product.productName!)")
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction,updateAction])
+    }
     
 }
 
