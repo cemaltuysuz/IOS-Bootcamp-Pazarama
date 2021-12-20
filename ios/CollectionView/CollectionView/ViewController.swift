@@ -29,9 +29,22 @@ class ViewController: UIViewController {
         countriesList.append(c3)
         countriesList.append(c4)
         countriesList.append(c5)
+        
+        let design = UICollectionViewFlowLayout()
+        // inset (CollectionView)
+        design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        // Horizontal space between Items (Item)
+        design.minimumInteritemSpacing = 5
+        // Vertical space between Items (Item)
+        design.minimumLineSpacing = 5
+        
+        // Total horizontal space = Left Space(10) + Right Space(10) + 3 Count Item (5 + 5) -> 30
+        let width = self.countrieCollectionView.frame.width
+        
+        design.itemSize = CGSize(width: (width-30)/3, height: (width-30)/3)
+        countrieCollectionView!.collectionViewLayout = design
+        
     }
-
-
 }
 
 extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource {
