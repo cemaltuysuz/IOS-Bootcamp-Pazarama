@@ -40,22 +40,22 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="T56-4f-4zR">
                                                             <rect key="frame" x="168" y="36.5" width="120" height="107.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Iphone 13 Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ig-EZ-Emx">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iphone 13 Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ig-EZ-Emx">
                                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="13.999 ₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahY-9a-sud">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.999 ₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahY-9a-sud">
                                                                     <rect key="frame" x="0.0" y="40" width="67" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-o5-ooY">
-                                                                    <rect key="frame" x="0.0" y="76.5" width="100.5" height="31"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-o5-ooY">
+                                                                    <rect key="frame" x="0.0" y="76.5" width="109" height="31"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle"/>
+                                                                    <buttonConfiguration key="configuration" style="filled" title="Add To Chart"/>
                                                                     <connections>
                                                                         <action selector="InsertToChart:" destination="frQ-l5-RbA" eventType="touchUpInside" id="uGQ-xl-idg"/>
                                                                     </connections>
@@ -101,6 +101,7 @@
                     <navigationItem key="navigationItem" title="Products" id="Wyi-9a-gp5"/>
                     <connections>
                         <outlet property="productTableView" destination="abm-kx-Jfw" id="fJc-BB-iL5"/>
+                        <segue destination="MsJ-yA-8SO" kind="show" identifier="toDetails" id="pdR-n8-fOA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,9 +115,57 @@
                     <view key="view" contentMode="scaleToFill" id="g8f-4j-GGg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iphone 13 PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa1-0j-kQe">
+                                <rect key="frame" x="30" y="140" width="354" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="edf-h6-eYu">
+                                <rect key="frame" x="87" y="252" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="CwY-ey-PKR"/>
+                                    <constraint firstAttribute="height" constant="240" id="FPF-Kj-9pR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3U-qD-ChY">
+                                <rect key="frame" x="187.5" y="522" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9L-jk-9Kv">
+                                <rect key="frame" x="130" y="593" width="154" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add To Chart"/>
+                                <connections>
+                                    <action selector="addToChart:" destination="MsJ-yA-8SO" eventType="touchUpInside" id="kef-2x-itg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NeM-tS-6mo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E9L-jk-9Kv" firstAttribute="leading" secondItem="NeM-tS-6mo" secondAttribute="leading" constant="130" id="57V-yO-Zbb"/>
+                            <constraint firstItem="b3U-qD-ChY" firstAttribute="top" secondItem="edf-h6-eYu" secondAttribute="bottom" constant="30" id="77T-MQ-tMd"/>
+                            <constraint firstItem="NeM-tS-6mo" firstAttribute="trailing" secondItem="E9L-jk-9Kv" secondAttribute="trailing" constant="130" id="DgE-kx-vGE"/>
+                            <constraint firstItem="Xa1-0j-kQe" firstAttribute="leading" secondItem="NeM-tS-6mo" secondAttribute="leading" constant="30" id="JSd-fJ-cmW"/>
+                            <constraint firstItem="NeM-tS-6mo" firstAttribute="trailing" secondItem="Xa1-0j-kQe" secondAttribute="trailing" constant="30" id="PdG-84-vv8"/>
+                            <constraint firstItem="b3U-qD-ChY" firstAttribute="centerX" secondItem="g8f-4j-GGg" secondAttribute="centerX" id="XXx-3q-YUG"/>
+                            <constraint firstItem="Xa1-0j-kQe" firstAttribute="top" secondItem="NeM-tS-6mo" secondAttribute="top" id="l4V-Wp-uVB"/>
+                            <constraint firstItem="edf-h6-eYu" firstAttribute="centerX" secondItem="g8f-4j-GGg" secondAttribute="centerX" id="qka-8R-sO2"/>
+                            <constraint firstItem="E9L-jk-9Kv" firstAttribute="centerX" secondItem="g8f-4j-GGg" secondAttribute="centerX" id="sHh-Wd-Uv8"/>
+                            <constraint firstItem="edf-h6-eYu" firstAttribute="top" secondItem="Xa1-0j-kQe" secondAttribute="bottom" constant="70" id="twf-2T-qja"/>
+                            <constraint firstItem="E9L-jk-9Kv" firstAttribute="top" secondItem="b3U-qD-ChY" secondAttribute="bottom" constant="50" id="uHQ-Fe-4L6"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xLC-M0-eZc"/>
+                    <connections>
+                        <outlet property="productDetailPrice" destination="b3U-qD-ChY" id="opA-g8-Uvo"/>
+                        <outlet property="productDetailTitle" destination="Xa1-0j-kQe" id="t0h-uc-vDF"/>
+                        <outlet property="productDetailımage" destination="edf-h6-eYu" id="K90-vg-lS3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rnu-G2-BDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,10 +18,10 @@ class ViewController: UIViewController {
         productTableView.delegate = self
         productTableView.dataSource = self
         
-        let p1 = Product(productId: 1, productName: "Macbook PRO 14", productImage: "computer", productPrice: 30.00)
-        let p2 = Product(productId: 2, productName: "Rayban Club Master", productImage: "glass", productPrice: 28.00)
-        let p3 = Product(productId: 3, productName: "Sony ZX Series", productImage: "headphone", productPrice: 28.00)
-        let p4 = Product(productId: 4, productName: "Gio Armani", productImage: "parfume", productPrice: 2.000)
+        let p1 = Product(productId: 1, productName: "Macbook PRO 14", productImage: "computer", productPrice: 30000.0)
+        let p2 = Product(productId: 2, productName: "Rayban Club Master", productImage: "glass", productPrice: 2900.0)
+        let p3 = Product(productId: 3, productName: "Sony ZX Series", productImage: "headphone", productPrice: 2800.0)
+        let p4 = Product(productId: 4, productName: "Gio Armani", productImage: "parfume", productPrice: 2000.0)
         let p5 = Product(productId: 5, productName: "Iphone 13 PRO", productImage: "phone", productPrice: 15000.0)
         let p6 = Product(productId: 6, productName: "Casio", productImage: "watch", productPrice: 5000.0)
         
@@ -67,8 +67,16 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource,CellProtocol{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let product = productList[indexPath.row]
-        print("Selected : \(product.productName!)")
+        performSegue(withIdentifier: "toDetails", sender: product)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetails" {
+            let product = sender as! Product
+            let targetVC = segue.destination as! DetailVC
+            targetVC.product = product
+        }
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
