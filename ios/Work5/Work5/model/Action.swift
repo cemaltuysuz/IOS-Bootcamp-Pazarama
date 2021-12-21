@@ -15,7 +15,10 @@ enum ActionType {
     case Num
     case Process
 }
-
+/**
+ actionId referansı ile bir field oluşturmamın sebebi işlem process ise hangi process olduğuna karar vermek.
+ Bu durumu aslında button içerisindeki yazıyı kontrol ederek de sağlayabilirdim lakin hardcode şeklinde bir String karşılaştırması yapmayı uygun gormedim.
+ */
 class Action {
     var actionId:Int?
     var action:String?
