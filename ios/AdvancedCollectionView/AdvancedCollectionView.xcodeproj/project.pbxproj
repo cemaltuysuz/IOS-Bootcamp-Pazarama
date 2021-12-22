@@ -18,6 +18,7 @@
 		15F585EE277386FF00330A1A /* AdvancedCollectionViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F585ED277386FF00330A1A /* AdvancedCollectionViewUITestsLaunchTests.swift */; };
 		15F585FB277387EA00330A1A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F585FA277387EA00330A1A /* Movie.swift */; };
 		15F585FD27738D4200330A1A /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F585FC27738D4200330A1A /* MovieCollectionViewCell.swift */; };
+		15F585FF27739B4700330A1A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F585FE27739B4700330A1A /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		15F585ED277386FF00330A1A /* AdvancedCollectionViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCollectionViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		15F585FA277387EA00330A1A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		15F585FC27738D4200330A1A /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		15F585FE27739B4700330A1A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				15F585D5277386FF00330A1A /* LaunchScreen.storyboard */,
 				15F585D8277386FF00330A1A /* Info.plist */,
 				15F585FA277387EA00330A1A /* Movie.swift */,
+				15F585FE27739B4700330A1A /* Protocols.swift */,
 			);
 			path = AdvancedCollectionView;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				15F585CF277386FE00330A1A /* ViewController.swift in Sources */,
 				15F585CB277386FE00330A1A /* AppDelegate.swift in Sources */,
 				15F585FD27738D4200330A1A /* MovieCollectionViewCell.swift in Sources */,
+				15F585FF27739B4700330A1A /* Protocols.swift in Sources */,
 				15F585FB277387EA00330A1A /* Movie.swift in Sources */,
 				15F585CD277386FE00330A1A /* SceneDelegate.swift in Sources */,
 			);

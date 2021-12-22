@@ -50,7 +50,12 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource {
+extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource, MovieCellProtocol {
+    func onClick(indexpath: IndexPath) {
+        let movie = movieList[indexpath.row]
+        print("Added to chart : \(movie.movieName!)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieList.count
     }
@@ -63,6 +68,9 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource {
         cell.layer.borderColor = UIColor.systemIndigo.cgColor
         cell.layer.borderWidth = 1
         
+        cell.indexpath = indexPath
+        cell.movieCellProtocol = self
+        
         
         cell.movieImageview.image = UIImage(named: currentMovie.movieImageName!)
         cell.movieTitle.text = currentMovie.movieName
@@ -71,6 +79,8 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource {
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selected item : \(movieList[indexPath.row].movieName!)")
+    }
 }
 
