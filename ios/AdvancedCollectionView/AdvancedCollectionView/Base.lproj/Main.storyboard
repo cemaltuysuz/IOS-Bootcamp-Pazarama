@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="bVj-fI-GBe">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="bVj-fI-GBe" customClass="MovieCollectionViewCell" customModule="AdvancedCollectionView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="340"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1fh-cf-cB5">
@@ -40,7 +40,10 @@
                                                         <constraint firstAttribute="height" constant="200" id="c8Z-zr-1F2"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhango" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrG-cC-xFh">
@@ -61,6 +64,9 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Add To Chart">
                                                         <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="addToChartButton:" destination="bVj-fI-GBe" eventType="touchUpInside" id="jdK-x2-1Sr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -74,6 +80,11 @@
                                                 <constraint firstItem="Tek-bt-h9e" firstAttribute="centerX" secondItem="1fh-cf-cB5" secondAttribute="centerX" id="p75-za-EYY"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieImageview" destination="dDN-bT-ODr" id="SOB-bV-EJ5"/>
+                                            <outlet property="moviePrice" destination="Tjx-xB-of8" id="Dxa-9N-Evu"/>
+                                            <outlet property="movieTitle" destination="OrG-cC-xFh" id="M2w-r3-9kQ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -88,6 +99,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="ARV-G9-nNH"/>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="bVL-Zz-AZS" id="UxN-G2-hT2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
