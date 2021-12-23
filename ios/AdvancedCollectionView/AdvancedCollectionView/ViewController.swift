@@ -48,6 +48,14 @@ class ViewController: UIViewController {
         movieList.append(m6)
                 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let incomingMovie = sender as! Movie
+            let targetVC = segue.destination as! DetailVC
+            targetVC.movie = incomingMovie
+        }
+    }
 }
 
 extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource, MovieCellProtocol {
@@ -80,7 +88,8 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected item : \(movieList[indexPath.row].movieName!)")
+        let movie = movieList[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: movie)
     }
 }
 

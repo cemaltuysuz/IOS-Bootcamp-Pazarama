@@ -101,6 +101,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="ARV-G9-nNH"/>
                     <connections>
                         <outlet property="moviesCollectionView" destination="bVL-Zz-AZS" id="UxN-G2-hT2"/>
+                        <segue destination="mZy-Cj-pQ3" kind="presentation" identifier="toDetail" id="7pO-M6-yHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,6 +125,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xe4-Ev-Edn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="NVv-0h-Hp6">
+            <objects>
+                <viewController id="mZy-Cj-pQ3" customClass="DetailVC" customModule="AdvancedCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roE-ci-1X3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Django" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-AN-TZt">
+                                <rect key="frame" x="125" y="50" width="164" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quentin Tarantino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iB-TN-Sfr">
+                                <rect key="frame" x="129.5" y="140" width="155.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="django" translatesAutoresizingMaskIntoConstraints="NO" id="RjT-0D-dFV">
+                                <rect key="frame" x="107" y="234" width="200" height="300"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15.99₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hju-Rd-p0S">
+                                <rect key="frame" x="157.5" y="574" width="99" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-gc-dA0">
+                                <rect key="frame" x="107" y="648" width="200" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add To Chart"/>
+                                <connections>
+                                    <action selector="detailAddToChartButton:" destination="mZy-Cj-pQ3" eventType="touchUpInside" id="nG3-Gg-ReG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YeK-Y4-GM5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Td9-gc-dA0" firstAttribute="centerX" secondItem="roE-ci-1X3" secondAttribute="centerX" id="9ic-xe-kah"/>
+                            <constraint firstItem="Td9-gc-dA0" firstAttribute="top" secondItem="Hju-Rd-p0S" secondAttribute="bottom" constant="38" id="Bvv-h2-Hsk"/>
+                            <constraint firstItem="Jkz-AN-TZt" firstAttribute="centerX" secondItem="roE-ci-1X3" secondAttribute="centerX" id="Hei-nL-eKy"/>
+                            <constraint firstItem="RjT-0D-dFV" firstAttribute="top" secondItem="8iB-TN-Sfr" secondAttribute="bottom" constant="70" id="TdG-I7-fe1"/>
+                            <constraint firstItem="8iB-TN-Sfr" firstAttribute="top" secondItem="Jkz-AN-TZt" secondAttribute="bottom" constant="30" id="U3c-ic-Wz7"/>
+                            <constraint firstItem="RjT-0D-dFV" firstAttribute="centerX" secondItem="roE-ci-1X3" secondAttribute="centerX" id="Une-dM-LAb"/>
+                            <constraint firstItem="8iB-TN-Sfr" firstAttribute="centerX" secondItem="roE-ci-1X3" secondAttribute="centerX" id="Xdd-cr-VLn"/>
+                            <constraint firstItem="Hju-Rd-p0S" firstAttribute="centerX" secondItem="roE-ci-1X3" secondAttribute="centerX" id="cjr-eS-8cw"/>
+                            <constraint firstItem="Jkz-AN-TZt" firstAttribute="top" secondItem="YeK-Y4-GM5" secondAttribute="top" constant="50" id="kQM-Rb-Y0i"/>
+                            <constraint firstItem="Hju-Rd-p0S" firstAttribute="top" secondItem="RjT-0D-dFV" secondAttribute="bottom" constant="40" id="tCK-vW-7oA"/>
+                            <constraint firstItem="Td9-gc-dA0" firstAttribute="width" secondItem="RjT-0D-dFV" secondAttribute="width" id="yfB-Vj-AZu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailMovieDirector" destination="8iB-TN-Sfr" id="6oO-ZW-lvL"/>
+                        <outlet property="detailMovieImageView" destination="RjT-0D-dFV" id="P6Q-TP-1GN"/>
+                        <outlet property="detailMoviePrice" destination="Hju-Rd-p0S" id="seY-31-JaG"/>
+                        <outlet property="detailMovieTitle" destination="Jkz-AN-TZt" id="R5I-1m-rEN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Av-h2-ggE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="98"/>
         </scene>
     </scenes>
     <resources>
