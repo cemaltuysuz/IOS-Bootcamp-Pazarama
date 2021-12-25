@@ -12,27 +12,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var sayi1TextField: UITextField!
     @IBOutlet weak var sayi2TextField: UITextField!
     
+    var presenterNesnesi:ViewToPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sonucLabel.text = "0"
+        Router.createModule(ref: self)
     }
 
     @IBAction func toplaButton(_ sender: Any) {
         if let s1 = sayi1TextField.text, let s2 = sayi2TextField.text {
-            if let sayi1 = Int(s1), let sayi2 = Int(s2){
-                let toplam = sayi1 + sayi2
-                sonucLabel.text = String(toplam)
-            }
+            presenterNesnesi?.toplamaYap(sayi1: s1, sayi2: s2)
         }
     }
     
     @IBAction func çarpmaButton(_ sender: Any) {
         if let s1 = sayi1TextField.text, let s2 = sayi2TextField.text {
-            if let sayi1 = Int(s1), let sayi2 = Int(s2){
-                let toplam = sayi1 * sayi2
-                sonucLabel.text = String(toplam)
-            }
+            presenterNesnesi?.carpmaYap(sayi1: s1, sayi2: s2)
         }
+    }
+}
+
+extension ViewController : PresenterToViewProtocol {
+    func vieweVeriGonder(sonuc: String) {
+        sonucLabel.text = sonuc
     }
 }
 

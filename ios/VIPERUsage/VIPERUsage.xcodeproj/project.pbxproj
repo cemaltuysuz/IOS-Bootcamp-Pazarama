@@ -16,6 +16,10 @@
 		15DA8B3A277787020094B0BE /* VIPERUsageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B39277787020094B0BE /* VIPERUsageTests.swift */; };
 		15DA8B44277787020094B0BE /* VIPERUsageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B43277787020094B0BE /* VIPERUsageUITests.swift */; };
 		15DA8B46277787020094B0BE /* VIPERUsageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B45277787020094B0BE /* VIPERUsageUITestsLaunchTests.swift */; };
+		15DA8B59277790440094B0BE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B58277790440094B0BE /* Protocols.swift */; };
+		15DA8B5B277798E50094B0BE /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B5A277798E50094B0BE /* Interactor.swift */; };
+		15DA8B5D27779A1A0094B0BE /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B5C27779A1A0094B0BE /* Presenter.swift */; };
+		15DA8B5F27779D1F0094B0BE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA8B5E27779D1F0094B0BE /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		15DA8B3F277787020094B0BE /* VIPERUsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPERUsageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DA8B43277787020094B0BE /* VIPERUsageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERUsageUITests.swift; sourceTree = "<group>"; };
 		15DA8B45277787020094B0BE /* VIPERUsageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERUsageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15DA8B58277790440094B0BE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		15DA8B5A277798E50094B0BE /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		15DA8B5C27779A1A0094B0BE /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		15DA8B5E27779D1F0094B0BE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,7 @@
 		15DA8B5427778BE70094B0BE /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8B5C27779A1A0094B0BE /* Presenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 		15DA8B5527778BFB0094B0BE /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8B5A277798E50094B0BE /* Interactor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 		15DA8B5627778C0A0094B0BE /* router */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8B5E27779D1F0094B0BE /* Router.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 		15DA8B5727778C150094B0BE /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				15DA8B58277790440094B0BE /* Protocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -306,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15DA8B5D27779A1A0094B0BE /* Presenter.swift in Sources */,
 				15DA8B27277787020094B0BE /* ViewController.swift in Sources */,
 				15DA8B23277787020094B0BE /* AppDelegate.swift in Sources */,
+				15DA8B5F27779D1F0094B0BE /* Router.swift in Sources */,
+				15DA8B5B277798E50094B0BE /* Interactor.swift in Sources */,
 				15DA8B25277787020094B0BE /* SceneDelegate.swift in Sources */,
+				15DA8B59277790440094B0BE /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
