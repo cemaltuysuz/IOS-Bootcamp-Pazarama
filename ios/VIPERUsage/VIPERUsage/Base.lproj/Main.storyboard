@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VIPERUsage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzX-iC-iHZ">
+                                <rect key="frame" x="160" y="194" width="94" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sayi 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eig-R1-rNS">
+                                <rect key="frame" x="50" y="342" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sayi 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBC-gh-zPV">
+                                <rect key="frame" x="50" y="426" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-hi-dn3">
+                                <rect key="frame" x="50" y="510" width="78.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Toplama"/>
+                                <connections>
+                                    <action selector="toplaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFf-Q6-tb3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZY-NU-Ljt">
+                                <rect key="frame" x="289" y="510" width="75" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Çarpma"/>
+                                <connections>
+                                    <action selector="çarpmaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zR-Y8-lX1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SBC-gh-zPV" secondAttribute="trailing" constant="50" id="339-U1-cFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eig-R1-rNS" secondAttribute="trailing" constant="50" id="8Kb-3w-ani"/>
+                            <constraint firstItem="eig-R1-rNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Jem-kl-R4m"/>
+                            <constraint firstItem="gzX-iC-iHZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Mgp-kf-qhI"/>
+                            <constraint firstItem="SBC-gh-zPV" firstAttribute="top" secondItem="eig-R1-rNS" secondAttribute="bottom" constant="50" id="RXE-vg-VBp"/>
+                            <constraint firstItem="eig-R1-rNS" firstAttribute="top" secondItem="gzX-iC-iHZ" secondAttribute="bottom" constant="100" id="UEi-Fw-Fh7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iZY-NU-Ljt" secondAttribute="trailing" constant="50" id="WAC-zY-YcN"/>
+                            <constraint firstItem="SBC-gh-zPV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="WC2-z9-eDN"/>
+                            <constraint firstItem="4dk-hi-dn3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bO3-rA-riY"/>
+                            <constraint firstItem="gzX-iC-iHZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e6p-51-nnl"/>
+                            <constraint firstItem="iZY-NU-Ljt" firstAttribute="top" secondItem="SBC-gh-zPV" secondAttribute="bottom" constant="50" id="mxJ-gj-CGs"/>
+                            <constraint firstItem="4dk-hi-dn3" firstAttribute="top" secondItem="SBC-gh-zPV" secondAttribute="bottom" constant="50" id="oNV-o3-S8S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sayi1TextField" destination="eig-R1-rNS" id="wOF-1W-8MG"/>
+                        <outlet property="sayi2TextField" destination="SBC-gh-zPV" id="zSf-LM-sUR"/>
+                        <outlet property="sonucLabel" destination="gzX-iC-iHZ" id="AEN-at-aTp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
