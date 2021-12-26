@@ -17,6 +17,7 @@
 		1555789C2778C207001E9711 /* Work_6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555789B2778C207001E9711 /* Work_6UITests.swift */; };
 		1555789E2778C207001E9711 /* Work_6UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555789D2778C207001E9711 /* Work_6UITestsLaunchTests.swift */; };
 		155578AB2778C2A7001E9711 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155578AA2778C2A7001E9711 /* Product.swift */; };
+		155578AD2778E510001E9711 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155578AC2778E510001E9711 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1555789B2778C207001E9711 /* Work_6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work_6UITests.swift; sourceTree = "<group>"; };
 		1555789D2778C207001E9711 /* Work_6UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work_6UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		155578AA2778C2A7001E9711 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		155578AC2778E510001E9711 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1555787C2778C207001E9711 /* SceneDelegate.swift */,
 				1555787E2778C207001E9711 /* ViewController.swift */,
 				155578802778C207001E9711 /* Main.storyboard */,
+				155578AC2778E510001E9711 /* ProductCollectionViewCell.swift */,
 				155578832778C207001E9711 /* Assets.xcassets */,
 				155578852778C207001E9711 /* LaunchScreen.storyboard */,
 				155578882778C207001E9711 /* Info.plist */,
@@ -263,6 +266,7 @@
 			files = (
 				1555787F2778C207001E9711 /* ViewController.swift in Sources */,
 				155578AB2778C2A7001E9711 /* Product.swift in Sources */,
+				155578AD2778E510001E9711 /* ProductCollectionViewCell.swift in Sources */,
 				1555787B2778C207001E9711 /* AppDelegate.swift in Sources */,
 				1555787D2778C207001E9711 /* SceneDelegate.swift in Sources */,
 			);
