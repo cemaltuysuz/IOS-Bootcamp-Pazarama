@@ -19,6 +19,10 @@
 		152C9076276E0D3A005D334F /* PersonRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */; };
 		152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9077276E0D4D005D334F /* PersonDetailsVC.swift */; };
 		152C907A276E1022005D334F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9079276E1022005D334F /* Person.swift */; };
+		15AF3674277A20DC00257C05 /* PersonRegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3673277A20DC00257C05 /* PersonRegisterProtocols.swift */; };
+		15AF3676277A22D100257C05 /* PersonRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */; };
+		15AF3678277A235A00257C05 /* PersonRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */; };
+		15AF367A277A24C900257C05 /* PersonRegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3679277A24C900257C05 /* PersonRegisterRouter.swift */; };
 		15B32586276F523900E6C54C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B32585276F523900E6C54C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,10 @@
 		152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrationVC.swift; sourceTree = "<group>"; };
 		152C9077276E0D4D005D334F /* PersonDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsVC.swift; sourceTree = "<group>"; };
 		152C9079276E1022005D334F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		15AF3673277A20DC00257C05 /* PersonRegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterProtocols.swift; sourceTree = "<group>"; };
+		15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterInteractor.swift; sourceTree = "<group>"; };
+		15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterPresenter.swift; sourceTree = "<group>"; };
+		15AF3679277A24C900257C05 /* PersonRegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterRouter.swift; sourceTree = "<group>"; };
 		15B32585276F523900E6C54C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,17 +115,16 @@
 		152C9042276E0C2B005D334F /* Contacts Apps */ = {
 			isa = PBXGroup;
 			children = (
+				15AF3667277A1EFB00257C05 /* entity */,
 				152C9043276E0C2B005D334F /* AppDelegate.swift */,
 				152C9045276E0C2B005D334F /* SceneDelegate.swift */,
 				152C9049276E0C2B005D334F /* Main.storyboard */,
-				15B32585276F523900E6C54C /* TableViewCell.swift */,
 				152C904C276E0C2C005D334F /* Assets.xcassets */,
 				152C904E276E0C2C005D334F /* LaunchScreen.storyboard */,
 				152C9051276E0C2C005D334F /* Info.plist */,
-				152C9073276E0C50005D334F /* HomeVC.swift */,
-				152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */,
-				152C9077276E0D4D005D334F /* PersonDetailsVC.swift */,
-				152C9079276E1022005D334F /* Person.swift */,
+				15AF3668277A1F1200257C05 /* home-module */,
+				15AF366A277A1F4D00257C05 /* person-detail-module */,
+				15AF3669277A1F3800257C05 /* person-register-module */,
 			);
 			path = "Contacts Apps";
 			sourceTree = "<group>";
@@ -137,6 +144,139 @@
 				152C9066276E0C2C005D334F /* Contacts_AppsUITestsLaunchTests.swift */,
 			);
 			path = "Contacts AppsUITests";
+			sourceTree = "<group>";
+		};
+		15AF3667277A1EFB00257C05 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				152C9079276E1022005D334F /* Person.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		15AF3668277A1F1200257C05 /* home-module */ = {
+			isa = PBXGroup;
+			children = (
+				15AF366E277A1FB800257C05 /* tableview */,
+				15AF366B277A1F7F00257C05 /* view */,
+			);
+			path = "home-module";
+			sourceTree = "<group>";
+		};
+		15AF3669277A1F3800257C05 /* person-register-module */ = {
+			isa = PBXGroup;
+			children = (
+				15AF3672277A202700257C05 /* router */,
+				15AF3671277A201D00257C05 /* presenter */,
+				15AF3670277A201700257C05 /* interactor */,
+				15AF366F277A201200257C05 /* protocols */,
+				15AF366D277A1F9F00257C05 /* view */,
+			);
+			path = "person-register-module";
+			sourceTree = "<group>";
+		};
+		15AF366A277A1F4D00257C05 /* person-detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				15AF367E277A2B4A00257C05 /* protocols */,
+				15AF367D277A2B3900257C05 /* interactor */,
+				15AF367C277A2B2600257C05 /* presenter */,
+				15AF367B277A2B1E00257C05 /* router */,
+				15AF366C277A1F9200257C05 /* view */,
+			);
+			path = "person-detail-module";
+			sourceTree = "<group>";
+		};
+		15AF366B277A1F7F00257C05 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				152C9073276E0C50005D334F /* HomeVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		15AF366C277A1F9200257C05 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				152C9077276E0D4D005D334F /* PersonDetailsVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		15AF366D277A1F9F00257C05 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		15AF366E277A1FB800257C05 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				15B32585276F523900E6C54C /* TableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		15AF366F277A201200257C05 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				15AF3673277A20DC00257C05 /* PersonRegisterProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		15AF3670277A201700257C05 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		15AF3671277A201D00257C05 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		15AF3672277A202700257C05 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				15AF3679277A24C900257C05 /* PersonRegisterRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		15AF367B277A2B1E00257C05 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		15AF367C277A2B2600257C05 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		15AF367D277A2B3900257C05 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		15AF367E277A2B4A00257C05 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +410,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15AF3678277A235A00257C05 /* PersonRegisterPresenter.swift in Sources */,
 				152C907A276E1022005D334F /* Person.swift in Sources */,
+				15AF3674277A20DC00257C05 /* PersonRegisterProtocols.swift in Sources */,
+				15AF3676277A22D100257C05 /* PersonRegisterInteractor.swift in Sources */,
 				152C9076276E0D3A005D334F /* PersonRegistrationVC.swift in Sources */,
 				152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */,
 				152C9074276E0C50005D334F /* HomeVC.swift in Sources */,
+				15AF367A277A24C900257C05 /* PersonRegisterRouter.swift in Sources */,
 				152C9044276E0C2B005D334F /* AppDelegate.swift in Sources */,
 				15B32586276F523900E6C54C /* TableViewCell.swift in Sources */,
 				152C9046276E0C2B005D334F /* SceneDelegate.swift in Sources */,
