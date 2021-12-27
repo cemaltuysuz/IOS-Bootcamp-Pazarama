@@ -23,6 +23,10 @@
 		15AF3676277A22D100257C05 /* PersonRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */; };
 		15AF3678277A235A00257C05 /* PersonRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */; };
 		15AF367A277A24C900257C05 /* PersonRegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3679277A24C900257C05 /* PersonRegisterRouter.swift */; };
+		15AF3680277A2C6200257C05 /* PersonDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF367F277A2C6200257C05 /* PersonDetailProtocols.swift */; };
+		15AF3682277A2E4C00257C05 /* PersonDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3681277A2E4C00257C05 /* PersonDetailInteractor.swift */; };
+		15AF3684277A2ED400257C05 /* PersonDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3683277A2ED400257C05 /* PersonDetailPresenter.swift */; };
+		15AF3686277A303100257C05 /* PersonDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3685277A303100257C05 /* PersonDetailRouter.swift */; };
 		15B32586276F523900E6C54C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B32585276F523900E6C54C /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,10 @@
 		15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterInteractor.swift; sourceTree = "<group>"; };
 		15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterPresenter.swift; sourceTree = "<group>"; };
 		15AF3679277A24C900257C05 /* PersonRegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterRouter.swift; sourceTree = "<group>"; };
+		15AF367F277A2C6200257C05 /* PersonDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailProtocols.swift; sourceTree = "<group>"; };
+		15AF3681277A2E4C00257C05 /* PersonDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailInteractor.swift; sourceTree = "<group>"; };
+		15AF3683277A2ED400257C05 /* PersonDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailPresenter.swift; sourceTree = "<group>"; };
+		15AF3685277A303100257C05 /* PersonDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailRouter.swift; sourceTree = "<group>"; };
 		15B32585276F523900E6C54C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +262,7 @@
 		15AF367B277A2B1E00257C05 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				15AF3685277A303100257C05 /* PersonDetailRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 		15AF367C277A2B2600257C05 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				15AF3683277A2ED400257C05 /* PersonDetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -268,6 +278,7 @@
 		15AF367D277A2B3900257C05 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				15AF3681277A2E4C00257C05 /* PersonDetailInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -275,6 +286,7 @@
 		15AF367E277A2B4A00257C05 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				15AF367F277A2C6200257C05 /* PersonDetailProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -418,8 +430,12 @@
 				152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */,
 				152C9074276E0C50005D334F /* HomeVC.swift in Sources */,
 				15AF367A277A24C900257C05 /* PersonRegisterRouter.swift in Sources */,
+				15AF3686277A303100257C05 /* PersonDetailRouter.swift in Sources */,
 				152C9044276E0C2B005D334F /* AppDelegate.swift in Sources */,
+				15AF3680277A2C6200257C05 /* PersonDetailProtocols.swift in Sources */,
 				15B32586276F523900E6C54C /* TableViewCell.swift in Sources */,
+				15AF3682277A2E4C00257C05 /* PersonDetailInteractor.swift in Sources */,
+				15AF3684277A2ED400257C05 /* PersonDetailPresenter.swift in Sources */,
 				152C9046276E0C2B005D334F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
