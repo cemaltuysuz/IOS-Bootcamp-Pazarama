@@ -13,19 +13,15 @@ class HomeVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var personInfo: UILabel!
     
+    var homePresenter : ViewToPresenterHomeProtocol?
+    
     var personList = [Person]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let k1 = Person(kisi_id: 1, kisi_ad: "Cemal", kisi_tel: "123456")
-        let k2 = Person(kisi_id: 2, kisi_ad: "Caner", kisi_tel: "654321")
-        let k3 = Person(kisi_id: 3, kisi_ad: "Murat", kisi_tel: "342516")
-        let k4 = Person(kisi_id: 4, kisi_ad: "Kadah", kisi_tel: "615243")
-        personList.append(k1)
-        personList.append(k2)
-        personList.append(k3)
-        personList.append(k4)
+        HomeRouter.createModule(ref: self)
+        homePresenter?.getPeople()
         
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
@@ -33,11 +29,6 @@ class HomeVC: UIViewController {
         searchBar.delegate = self
 
     }
-    /*
-    @IBAction func denemeButton(_ sender: Any) {
-        let kisi = Person(kisi_id: 1, kisi_ad: "cEMAL", kisi_tel: "123456")
-        performSegue(withIdentifier: "toDetay", sender: kisi)
-    } */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {
@@ -50,7 +41,14 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Arama sonucu : \(searchText)")
+        self.homePresenter?.searchThePerson(word: searchText)
+    }
+}
+
+extension HomeVC : PresenterToViewHomeProtocol {
+    func personListToView(personList: Array<Person>) {
+        self.personList = personList
+        contactsTableView?.reloadData()
     }
 }
 
@@ -84,7 +82,7 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource{
             }
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in
-                print("Silindi \(kisi.kisi_ad!).")
+                self.homePresenter?.deleteThePerson(personId: kisi.kisi_id!)
             }
             alert.addAction(iptalAction)
             alert.addAction(evetAction)
