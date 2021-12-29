@@ -8,8 +8,21 @@
 import Foundation
 
 class PersonRegisterInteractor : PresenterToInteractorPersonRegisterProtocol {
+    let db:FMDatabase?
+    
+    init(){
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let databaseUrl = URL(fileURLWithPath: targetPath).appendingPathComponent("contacts.sqlite")
+        db = FMDatabase(path: databaseUrl.path)
+    }
     
     func insertPerson(personName: String, personNum: String) {
-        print("Kisi (from interactor) \(personName) \(personNum)")
+        db?.open()
+        do{
+            try db?.executeUpdate("INSERT INTO contacts (kisi_ad,kisi_tel) VALUES (?,?)", values: [personName,personNum])
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
 }

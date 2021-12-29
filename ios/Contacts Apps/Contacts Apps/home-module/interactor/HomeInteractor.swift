@@ -9,18 +9,36 @@ import Foundation
 
 class HomeInteractor : PresenterToInteractorHomeProtocol {
     var homePresenter: InteractorToPresenterHomeProtocol?
+    let db:FMDatabase?
+    
+    init(){
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let databaseUrl = URL(fileURLWithPath: targetPath).appendingPathComponent("contacts.sqlite")
+        db = FMDatabase(path: databaseUrl.path)
+    }
     
     func getAllPerson() {
         var personList = [Person]()
-        let k1 = Person(kisi_id: 1, kisi_ad: "Cemal", kisi_tel: "123456")
-        let k2 = Person(kisi_id: 2, kisi_ad: "Caner", kisi_tel: "654321")
-        let k3 = Person(kisi_id: 3, kisi_ad: "Murat", kisi_tel: "342516")
-        let k4 = Person(kisi_id: 4, kisi_ad: "Kadah", kisi_tel: "615243")
-        personList.append(k1)
-        personList.append(k2)
-        personList.append(k3)
-        personList.append(k4)
-        homePresenter?.personListToPresenter(personList: personList)
+        
+        db?.open()
+        
+        do{
+            let c = try db!.executeQuery("SELECT * FROM contacts", values: nil)
+            
+            while c.next() {
+                let person = Person(
+                    kisi_id: Int(c.string(forColumn: "kisi_id"))!,
+                    kisi_ad: c.string(forColumn: "kisi_ad")!,
+                    kisi_tel: c.string(forColumn: "kisi_tel")!
+                )
+                personList.append(person)
+            }
+            homePresenter?.personListToPresenter(personList: personList)
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
     }
     
     func searchPerson(word: String) {

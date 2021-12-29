@@ -20,13 +20,16 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        databaseCopy()
+
         HomeRouter.createModule(ref: self)
-        homePresenter?.getPeople()
         
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
         
         searchBar.delegate = self
+        
+        homePresenter?.getPeople()
 
     }
     
@@ -36,6 +39,22 @@ class HomeVC: UIViewController {
             let targetVC = segue.destination as! PersonDetailsVC
             targetVC.kisi = kisi
         }
+    }
+    
+    func databaseCopy(){
+        let bundlePath = Bundle.main.path(forResource: "contacts", ofType: ".sqlite")
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let copyPath = URL(fileURLWithPath: targetPath).appendingPathComponent("contacts.sqlite")
+        let fileManager = FileManager.default
+        
+        if fileManager.fileExists(atPath: copyPath.path){
+            print("Database is exists")
+        }else {
+            do{
+                try fileManager.copyItem(atPath: bundlePath!, toPath: copyPath.path)
+            }catch{}
+        }
+        
     }
 }
 

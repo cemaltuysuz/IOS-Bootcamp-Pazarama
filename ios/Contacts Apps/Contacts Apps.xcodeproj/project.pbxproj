@@ -19,6 +19,12 @@
 		152C9076276E0D3A005D334F /* PersonRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */; };
 		152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9077276E0D4D005D334F /* PersonDetailsVC.swift */; };
 		152C907A276E1022005D334F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C9079276E1022005D334F /* Person.swift */; };
+		158DFFA2277CD25500590D44 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DFF97277CD25500590D44 /* FMResultSet.m */; };
+		158DFFA3277CD25500590D44 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DFF98277CD25500590D44 /* FMDatabaseAdditions.m */; };
+		158DFFA4277CD25500590D44 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DFF99277CD25500590D44 /* FMDatabase.m */; };
+		158DFFA5277CD25500590D44 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DFF9B277CD25500590D44 /* FMDatabasePool.m */; };
+		158DFFA6277CD25500590D44 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DFFA1277CD25500590D44 /* FMDatabaseQueue.m */; };
+		158DFFA8277CD2DC00590D44 /* contacts.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 158DFFA7277CD2DC00590D44 /* contacts.sqlite */; };
 		15AF3674277A20DC00257C05 /* PersonRegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3673277A20DC00257C05 /* PersonRegisterProtocols.swift */; };
 		15AF3676277A22D100257C05 /* PersonRegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */; };
 		15AF3678277A235A00257C05 /* PersonRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */; };
@@ -68,6 +74,20 @@
 		152C9075276E0D3A005D334F /* PersonRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegistrationVC.swift; sourceTree = "<group>"; };
 		152C9077276E0D4D005D334F /* PersonDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsVC.swift; sourceTree = "<group>"; };
 		152C9079276E1022005D334F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		158DFF95277CD1C900590D44 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		158DFF96277CD25500590D44 /* Contacts Apps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts Apps-Bridging-Header.h"; sourceTree = "<group>"; };
+		158DFF97277CD25500590D44 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		158DFF98277CD25500590D44 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		158DFF99277CD25500590D44 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		158DFF9A277CD25500590D44 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		158DFF9B277CD25500590D44 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		158DFF9C277CD25500590D44 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		158DFF9D277CD25500590D44 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		158DFF9E277CD25500590D44 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		158DFF9F277CD25500590D44 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		158DFFA0277CD25500590D44 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		158DFFA1277CD25500590D44 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		158DFFA7277CD2DC00590D44 /* contacts.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = contacts.sqlite; sourceTree = "<group>"; };
 		15AF3673277A20DC00257C05 /* PersonRegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterProtocols.swift; sourceTree = "<group>"; };
 		15AF3675277A22D100257C05 /* PersonRegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterInteractor.swift; sourceTree = "<group>"; };
 		15AF3677277A235A00257C05 /* PersonRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRegisterPresenter.swift; sourceTree = "<group>"; };
@@ -115,6 +135,7 @@
 				152C9059276E0C2C005D334F /* Contacts AppsTests */,
 				152C9063276E0C2C005D334F /* Contacts AppsUITests */,
 				152C9041276E0C2B005D334F /* Products */,
+				158DFF94277CD1C900590D44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +159,22 @@
 				152C904C276E0C2C005D334F /* Assets.xcassets */,
 				152C904E276E0C2C005D334F /* LaunchScreen.storyboard */,
 				152C9051276E0C2C005D334F /* Info.plist */,
+				158DFFA7277CD2DC00590D44 /* contacts.sqlite */,
+				158DFF9D277CD25500590D44 /* FMDatabase.h */,
+				158DFF99277CD25500590D44 /* FMDatabase.m */,
+				158DFF9E277CD25500590D44 /* FMDatabaseAdditions.h */,
+				158DFF98277CD25500590D44 /* FMDatabaseAdditions.m */,
+				158DFFA0277CD25500590D44 /* FMDatabasePool.h */,
+				158DFF9B277CD25500590D44 /* FMDatabasePool.m */,
+				158DFF9F277CD25500590D44 /* FMDatabaseQueue.h */,
+				158DFFA1277CD25500590D44 /* FMDatabaseQueue.m */,
+				158DFF9C277CD25500590D44 /* FMDB.h */,
+				158DFF9A277CD25500590D44 /* FMResultSet.h */,
+				158DFF97277CD25500590D44 /* FMResultSet.m */,
 				15AF3668277A1F1200257C05 /* home-module */,
 				15AF366A277A1F4D00257C05 /* person-detail-module */,
 				15AF3669277A1F3800257C05 /* person-register-module */,
+				158DFF96277CD25500590D44 /* Contacts Apps-Bridging-Header.h */,
 			);
 			path = "Contacts Apps";
 			sourceTree = "<group>";
@@ -160,6 +194,14 @@
 				152C9066276E0C2C005D334F /* Contacts_AppsUITestsLaunchTests.swift */,
 			);
 			path = "Contacts AppsUITests";
+			sourceTree = "<group>";
+		};
+		158DFF94277CD1C900590D44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				158DFF95277CD1C900590D44 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		15AF3667277A1EFB00257C05 /* entity */ = {
@@ -403,6 +445,7 @@
 				TargetAttributes = {
 					152C903F276E0C2B005D334F = {
 						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
 					};
 					152C9055276E0C2C005D334F = {
 						CreatedOnToolsVersion = 13.2;
@@ -441,6 +484,7 @@
 			files = (
 				152C9050276E0C2C005D334F /* LaunchScreen.storyboard in Resources */,
 				152C904D276E0C2C005D334F /* Assets.xcassets in Resources */,
+				158DFFA8277CD2DC00590D44 /* contacts.sqlite in Resources */,
 				152C904B276E0C2B005D334F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,17 +513,22 @@
 				15AF3678277A235A00257C05 /* PersonRegisterPresenter.swift in Sources */,
 				152C907A276E1022005D334F /* Person.swift in Sources */,
 				15AF3674277A20DC00257C05 /* PersonRegisterProtocols.swift in Sources */,
+				158DFFA5277CD25500590D44 /* FMDatabasePool.m in Sources */,
 				15AF3676277A22D100257C05 /* PersonRegisterInteractor.swift in Sources */,
 				15AF3692277A3CF300257C05 /* HomeRouter.swift in Sources */,
+				158DFFA3277CD25500590D44 /* FMDatabaseAdditions.m in Sources */,
 				152C9076276E0D3A005D334F /* PersonRegistrationVC.swift in Sources */,
 				152C9078276E0D4D005D334F /* PersonDetailsVC.swift in Sources */,
 				152C9074276E0C50005D334F /* HomeVC.swift in Sources */,
+				158DFFA4277CD25500590D44 /* FMDatabase.m in Sources */,
 				15AF367A277A24C900257C05 /* PersonRegisterRouter.swift in Sources */,
 				15AF3686277A303100257C05 /* PersonDetailRouter.swift in Sources */,
 				152C9044276E0C2B005D334F /* AppDelegate.swift in Sources */,
 				15AF3680277A2C6200257C05 /* PersonDetailProtocols.swift in Sources */,
 				15B32586276F523900E6C54C /* TableViewCell.swift in Sources */,
 				15AF368C277A332500257C05 /* HomeProtocols.swift in Sources */,
+				158DFFA6277CD25500590D44 /* FMDatabaseQueue.m in Sources */,
+				158DFFA2277CD25500590D44 /* FMResultSet.m in Sources */,
 				15AF3682277A2E4C00257C05 /* PersonDetailInteractor.swift in Sources */,
 				15AF3684277A2ED400257C05 /* PersonDetailPresenter.swift in Sources */,
 				15AF3690277A3BA600257C05 /* HomePresenter.swift in Sources */,
@@ -661,6 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -678,6 +728,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.Contacts-Apps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts Apps/Contacts Apps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -688,6 +740,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -705,6 +758,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.Contacts-Apps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts Apps/Contacts Apps-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
