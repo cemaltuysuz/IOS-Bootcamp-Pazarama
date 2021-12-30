@@ -8,22 +8,54 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
+    @IBOutlet weak var homeSearchBar: UISearchBar!
+    @IBOutlet weak var homeTableView: UITableView!
+    
+    var tempList = [Responsibility]()
+    
+    var presenter:ViewToPresenterHomeProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        homeSearchBar.delegate = self
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+        
+        
+        HomeRouter.createModule(ref: self)
+        
+        presenter?.getAllResponsibilities()
+    }
+}
+// For VIPER
+extension HomeVC : PresenterToViewHomeProtocol {
+    func listToView(list: Array<Responsibility>) {
+        self.tempList = list
+        self.homeTableView.reloadData()
+    }
+}
 
-        // Do any additional setup after loading the view.
+// For tableView
+extension HomeVC : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tempList.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let currentResp = tempList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        cell.cellContent.text = currentResp.responsibility!
+        return cell
     }
-    */
-
 }
+
+// For SearchBar
+extension HomeVC : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.searchTheResponsibility(word: searchText)
+    }
+}
+
+

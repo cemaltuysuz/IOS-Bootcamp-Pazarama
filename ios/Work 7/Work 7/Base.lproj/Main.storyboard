@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="191" width="414" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" id="qTo-Yk-643">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" id="qTo-Yk-643" customClass="CustomTableViewCell" customModule="Work_7" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qTo-Yk-643" id="6Ns-pK-oxV">
@@ -43,6 +43,9 @@
                                                 <constraint firstItem="VHh-ce-Xoe" firstAttribute="centerX" secondItem="6Ns-pK-oxV" secondAttribute="centerX" id="eFc-t5-btY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellContent" destination="VHh-ce-Xoe" id="z11-w4-M2V"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -67,6 +70,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="homeSearchBar" destination="2zG-f0-g7q" id="Ka6-kW-i9Z"/>
+                        <outlet property="homeTableView" destination="xNe-EG-ZLW" id="Iwj-PP-naS"/>
                         <segue destination="To1-ls-dSl" kind="show" identifier="toDetails" id="ek8-zV-iyy"/>
                     </connections>
                 </viewController>
@@ -77,7 +82,7 @@
         <!--Detail-->
         <scene sceneID="hJA-5f-c9l">
             <objects>
-                <viewController id="To1-ls-dSl" sceneMemberID="viewController">
+                <viewController id="To1-ls-dSl" customClass="DetailVC" customModule="Work_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1F4-BE-wXk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +96,9 @@
                                 <rect key="frame" x="80" y="344" width="254" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="To1-ls-dSl" eventType="touchUpInside" id="VBw-YP-nbg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TlU-eh-jmB"/>
@@ -105,6 +113,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="3b5-ff-U7T"/>
+                    <connections>
+                        <outlet property="detailTextField" destination="bdo-c9-o6e" id="XIx-8x-pVP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERn-3x-Rtd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,7 +124,7 @@
         <!--Create-->
         <scene sceneID="zHw-W8-HC8">
             <objects>
-                <viewController id="nVE-HQ-Iur" sceneMemberID="viewController">
+                <viewController id="nVE-HQ-Iur" customClass="CreateVC" customModule="Work_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sGZ-uV-xgt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +138,9 @@
                                 <rect key="frame" x="80" y="314" width="254" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create"/>
+                                <connections>
+                                    <action selector="createButton:" destination="nVE-HQ-Iur" eventType="touchUpInside" id="l7T-NA-Mpc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WdX-0n-O84"/>
@@ -141,6 +155,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create" id="NRQ-Ol-cCt"/>
+                    <connections>
+                        <outlet property="createTextField" destination="hnJ-Wa-sgg" id="HUG-5z-SQl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pF-J0-jjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
