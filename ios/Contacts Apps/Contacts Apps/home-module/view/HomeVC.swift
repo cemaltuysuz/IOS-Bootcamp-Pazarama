@@ -32,6 +32,9 @@ class HomeVC: UIViewController {
         homePresenter?.getPeople()
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        homePresenter?.getPeople()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {

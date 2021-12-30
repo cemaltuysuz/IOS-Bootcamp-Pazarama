@@ -21,6 +21,7 @@ class HomePresenter : ViewToPresenterHomeProtocol, InteractorToPresenterHomeProt
     }
     
     func deleteThePerson(personId: Int) {
+        print("Silinmesi istenen kişi : \(personId)")
         homeInteractor?.deletePerson(personId: personId)
     }
     

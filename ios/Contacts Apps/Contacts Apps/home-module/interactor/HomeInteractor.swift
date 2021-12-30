@@ -9,6 +9,7 @@ import Foundation
 
 class HomeInteractor : PresenterToInteractorHomeProtocol {
     var homePresenter: InteractorToPresenterHomeProtocol?
+    
     let db:FMDatabase?
     
     init(){
@@ -42,12 +43,38 @@ class HomeInteractor : PresenterToInteractorHomeProtocol {
     }
     
     func searchPerson(word: String) {
-        print ("Search (form interactor) : \(word)")
+        var personList = [Person]()
+        
+        db?.open()
+        
+        do{
+            let c = try db!.executeQuery("SELECT * FROM contacts WHERE contacts.kisi_ad  like '%\(word)%'", values: nil)
+            
+            while c.next() {
+                let person = Person(
+                    kisi_id: Int(c.string(forColumn: "kisi_id"))!,
+                    kisi_ad: c.string(forColumn: "kisi_ad")!,
+                    kisi_tel: c.string(forColumn: "kisi_tel")!
+                )
+                personList.append(person)
+            }
+            homePresenter?.personListToPresenter(personList: personList)
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
     }
     
     func deletePerson(personId: Int) {
-        print("Deleted (from interactor) \(personId).")
+        print("Triggered")
+        db?.open()
+        do{
+            try db?.executeUpdate("DELETE FROM contacts WHERE kisi_id = ?", values: [personId])
+            getAllPerson()
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
-    
-    
 }
