@@ -11,10 +11,14 @@
 		156AF422277DEF9700816769 /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF421277DEF9700816769 /* CreateVC.swift */; };
 		156AF425277DF00000816769 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF424277DF00000816769 /* CustomTableViewCell.swift */; };
 		156AF427277DF28A00816769 /* Responsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF426277DF28A00816769 /* Responsibility.swift */; };
-		156AF429277DF42800816769 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF428277DF42800816769 /* Protocols.swift */; };
+		156AF429277DF42800816769 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF428277DF42800816769 /* HomeProtocols.swift */; };
 		156AF42B277DF8E700816769 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF42A277DF8E700816769 /* HomePresenter.swift */; };
 		156AF42D277DF8FA00816769 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF42C277DF8FA00816769 /* HomeInteractor.swift */; };
 		156AF42F277DF90500816769 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF42E277DF90500816769 /* HomeRouter.swift */; };
+		156AF431277E122A00816769 /* CreateProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF430277E122A00816769 /* CreateProtocols.swift */; };
+		156AF433277E133A00816769 /* CreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF432277E133A00816769 /* CreateInteractor.swift */; };
+		156AF435277E13C800816769 /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF434277E13C800816769 /* CreatePresenter.swift */; };
+		156AF437277E14B400816769 /* CreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF436277E14B400816769 /* CreateRouter.swift */; };
 		159DCD93277DE9F10045A1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159DCD92277DE9F10045A1FA /* AppDelegate.swift */; };
 		159DCD95277DE9F10045A1FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159DCD94277DE9F10045A1FA /* SceneDelegate.swift */; };
 		159DCD9A277DE9F10045A1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159DCD98277DE9F10045A1FA /* Main.storyboard */; };
@@ -48,10 +52,14 @@
 		156AF421277DEF9700816769 /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
 		156AF424277DF00000816769 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		156AF426277DF28A00816769 /* Responsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responsibility.swift; sourceTree = "<group>"; };
-		156AF428277DF42800816769 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		156AF428277DF42800816769 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		156AF42A277DF8E700816769 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		156AF42C277DF8FA00816769 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		156AF42E277DF90500816769 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		156AF430277E122A00816769 /* CreateProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProtocols.swift; sourceTree = "<group>"; };
+		156AF432277E133A00816769 /* CreateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractor.swift; sourceTree = "<group>"; };
+		156AF434277E13C800816769 /* CreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenter.swift; sourceTree = "<group>"; };
+		156AF436277E14B400816769 /* CreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRouter.swift; sourceTree = "<group>"; };
 		159DCD8F277DE9F10045A1FA /* Work 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		159DCD92277DE9F10045A1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		159DCD94277DE9F10045A1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 		156AF41B277DEEC700816769 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				156AF432277E133A00816769 /* CreateInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 		156AF41C277DEECD00816769 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				156AF434277E13C800816769 /* CreatePresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -153,6 +163,7 @@
 		156AF41D277DEED400816769 /* router */ = {
 			isa = PBXGroup;
 			children = (
+				156AF436277E14B400816769 /* CreateRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 		156AF41E277DEEDB00816769 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				156AF430277E122A00816769 /* CreateProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -274,7 +286,7 @@
 		159DCDC8277DEDAF0045A1FA /* protocols */ = {
 			isa = PBXGroup;
 			children = (
-				156AF428277DF42800816769 /* Protocols.swift */,
+				156AF428277DF42800816769 /* HomeProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -443,6 +455,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				156AF425277DF00000816769 /* CustomTableViewCell.swift in Sources */,
+				156AF433277E133A00816769 /* CreateInteractor.swift in Sources */,
+				156AF437277E14B400816769 /* CreateRouter.swift in Sources */,
 				159DCDC6277DED9D0045A1FA /* HomeVC.swift in Sources */,
 				156AF420277DEF7600816769 /* DetailVC.swift in Sources */,
 				156AF42D277DF8FA00816769 /* HomeInteractor.swift in Sources */,
@@ -451,7 +465,9 @@
 				159DCD95277DE9F10045A1FA /* SceneDelegate.swift in Sources */,
 				156AF42B277DF8E700816769 /* HomePresenter.swift in Sources */,
 				156AF427277DF28A00816769 /* Responsibility.swift in Sources */,
-				156AF429277DF42800816769 /* Protocols.swift in Sources */,
+				156AF431277E122A00816769 /* CreateProtocols.swift in Sources */,
+				156AF429277DF42800816769 /* HomeProtocols.swift in Sources */,
+				156AF435277E13C800816769 /* CreatePresenter.swift in Sources */,
 				156AF42F277DF90500816769 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

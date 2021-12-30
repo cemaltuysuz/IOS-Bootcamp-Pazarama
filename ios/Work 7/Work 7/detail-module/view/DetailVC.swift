@@ -8,16 +8,19 @@
 import UIKit
 
 class DetailVC: UIViewController {
-
+    
     @IBOutlet weak var detailTextField: UITextField!
+    var resp:Responsibility?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let r = resp {
+            detailTextField.text = r.responsibility!
+        }
     }
+    
     @IBAction func updateButton(_ sender: Any) {
         
     }
-    
 }
