@@ -30,6 +30,10 @@ class HomeVC: UIViewController {
         presenter?.getAllResponsibilities()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.getAllResponsibilities()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetails" {
             let targetVC = segue.destination as! DetailVC

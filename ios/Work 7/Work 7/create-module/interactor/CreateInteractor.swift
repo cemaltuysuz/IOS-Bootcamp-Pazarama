@@ -9,8 +9,22 @@ import Foundation
 
 class CreateInteractor : PresenterToInteractorCreateProtocol {
     
+    let db:FMDatabase?
+    
+    init(){
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let databaseUrl = URL(fileURLWithPath: targetPath).appendingPathComponent("todo.sqlite")
+        db = FMDatabase(path: databaseUrl.path)
+    }
+    
     func createResponsbility(content: String) {
-        print("create : \(content)")
+        db?.open()
+        do{
+            try db?.executeUpdate("INSERT INTO ResponsibilityDB (responsibility) VALUES (?)", values: [content])
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
 }
