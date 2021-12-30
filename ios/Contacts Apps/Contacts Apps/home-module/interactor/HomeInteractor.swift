@@ -67,7 +67,6 @@ class HomeInteractor : PresenterToInteractorHomeProtocol {
     }
     
     func deletePerson(personId: Int) {
-        print("Triggered")
         db?.open()
         do{
             try db?.executeUpdate("DELETE FROM contacts WHERE kisi_id = ?", values: [personId])
