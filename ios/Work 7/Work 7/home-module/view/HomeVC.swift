@@ -19,6 +19,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        copyDatabase()
+        
         homeSearchBar.delegate = self
         homeTableView.delegate = self
         homeTableView.dataSource = self
@@ -33,6 +35,22 @@ class HomeVC: UIViewController {
             let targetVC = segue.destination as! DetailVC
             let responsibility = sender as! Responsibility
             targetVC.resp = responsibility
+        }
+    }
+    func copyDatabase(){
+        let bundlePath = Bundle.main.path(forResource: "todo", ofType: ".sqlite")
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let copyPath = URL(fileURLWithPath: targetPath).appendingPathComponent("todo.sqlite")
+        let fileManager = FileManager.default
+        
+        if fileManager.fileExists(atPath: copyPath.path){
+            print("Database is exists")
+        }else {
+            do{
+                try fileManager.copyItem(atPath: bundlePath!, toPath: copyPath.path)
+            }catch{
+                print(error.localizedDescription)
+            }
         }
     }
 }

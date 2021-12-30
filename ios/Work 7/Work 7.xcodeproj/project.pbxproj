@@ -23,6 +23,12 @@
 		156AF43B277E16B100816769 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF43A277E16B100816769 /* DetailInteractor.swift */; };
 		156AF43D277E16F200816769 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF43C277E16F200816769 /* DetailPresenter.swift */; };
 		156AF43F277E185400816769 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156AF43E277E185400816769 /* DetailRouter.swift */; };
+		156AF44C277E21A800816769 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AF441277E21A700816769 /* FMDatabase.m */; };
+		156AF44D277E21A800816769 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AF447277E21A800816769 /* FMDatabaseQueue.m */; };
+		156AF44E277E21A800816769 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AF448277E21A800816769 /* FMDatabaseAdditions.m */; };
+		156AF44F277E21A800816769 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AF449277E21A800816769 /* FMDatabasePool.m */; };
+		156AF450277E21A800816769 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AF44B277E21A800816769 /* FMResultSet.m */; };
+		156AF454277E234500816769 /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 156AF453277E234500816769 /* todo.sqlite */; };
 		159DCD93277DE9F10045A1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159DCD92277DE9F10045A1FA /* AppDelegate.swift */; };
 		159DCD95277DE9F10045A1FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159DCD94277DE9F10045A1FA /* SceneDelegate.swift */; };
 		159DCD9A277DE9F10045A1FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159DCD98277DE9F10045A1FA /* Main.storyboard */; };
@@ -68,6 +74,20 @@
 		156AF43A277E16B100816769 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		156AF43C277E16F200816769 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		156AF43E277E185400816769 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		156AF440277E21A700816769 /* Work 7-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Work 7-Bridging-Header.h"; sourceTree = "<group>"; };
+		156AF441277E21A700816769 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		156AF442277E21A700816769 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		156AF443277E21A700816769 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		156AF444277E21A700816769 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		156AF445277E21A800816769 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		156AF446277E21A800816769 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		156AF447277E21A800816769 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		156AF448277E21A800816769 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		156AF449277E21A800816769 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		156AF44A277E21A800816769 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		156AF44B277E21A800816769 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		156AF452277E221700816769 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		156AF453277E234500816769 /* todo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = todo.sqlite; sourceTree = "<group>"; };
 		159DCD8F277DE9F10045A1FA /* Work 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		159DCD92277DE9F10045A1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		159DCD94277DE9F10045A1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +216,14 @@
 			path = tableview;
 			sourceTree = "<group>";
 		};
+		156AF451277E221700816769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				156AF452277E221700816769 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		159DCD86277DE9F10045A1FA = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +231,7 @@
 				159DCDA8277DE9F20045A1FA /* Work 7Tests */,
 				159DCDB2277DE9F20045A1FA /* Work 7UITests */,
 				159DCD90277DE9F10045A1FA /* Products */,
+				156AF451277E221700816769 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,6 +257,19 @@
 				159DCD9B277DE9F20045A1FA /* Assets.xcassets */,
 				159DCD9D277DE9F20045A1FA /* LaunchScreen.storyboard */,
 				159DCDA0277DE9F20045A1FA /* Info.plist */,
+				156AF44A277E21A800816769 /* FMDatabase.h */,
+				156AF441277E21A700816769 /* FMDatabase.m */,
+				156AF445277E21A800816769 /* FMDatabaseAdditions.h */,
+				156AF448277E21A800816769 /* FMDatabaseAdditions.m */,
+				156AF442277E21A700816769 /* FMDatabasePool.h */,
+				156AF449277E21A800816769 /* FMDatabasePool.m */,
+				156AF446277E21A800816769 /* FMDatabaseQueue.h */,
+				156AF447277E21A800816769 /* FMDatabaseQueue.m */,
+				156AF443277E21A700816769 /* FMDB.h */,
+				156AF444277E21A700816769 /* FMResultSet.h */,
+				156AF44B277E21A800816769 /* FMResultSet.m */,
+				156AF440277E21A700816769 /* Work 7-Bridging-Header.h */,
+				156AF453277E234500816769 /* todo.sqlite */,
 			);
 			path = "Work 7";
 			sourceTree = "<group>";
@@ -403,6 +445,7 @@
 				TargetAttributes = {
 					159DCD8E277DE9F10045A1FA = {
 						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
 					};
 					159DCDA4277DE9F20045A1FA = {
 						CreatedOnToolsVersion = 13.2;
@@ -440,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				159DCD9F277DE9F20045A1FA /* LaunchScreen.storyboard in Resources */,
+				156AF454277E234500816769 /* todo.sqlite in Resources */,
 				159DCD9C277DE9F20045A1FA /* Assets.xcassets in Resources */,
 				159DCD9A277DE9F10045A1FA /* Main.storyboard in Resources */,
 			);
@@ -469,9 +513,13 @@
 				156AF425277DF00000816769 /* CustomTableViewCell.swift in Sources */,
 				156AF433277E133A00816769 /* CreateInteractor.swift in Sources */,
 				156AF437277E14B400816769 /* CreateRouter.swift in Sources */,
+				156AF44F277E21A800816769 /* FMDatabasePool.m in Sources */,
+				156AF44C277E21A800816769 /* FMDatabase.m in Sources */,
 				156AF43F277E185400816769 /* DetailRouter.swift in Sources */,
+				156AF450277E21A800816769 /* FMResultSet.m in Sources */,
 				159DCDC6277DED9D0045A1FA /* HomeVC.swift in Sources */,
 				156AF420277DEF7600816769 /* DetailVC.swift in Sources */,
+				156AF44E277E21A800816769 /* FMDatabaseAdditions.m in Sources */,
 				156AF42D277DF8FA00816769 /* HomeInteractor.swift in Sources */,
 				156AF422277DEF9700816769 /* CreateVC.swift in Sources */,
 				159DCD93277DE9F10045A1FA /* AppDelegate.swift in Sources */,
@@ -482,6 +530,7 @@
 				156AF427277DF28A00816769 /* Responsibility.swift in Sources */,
 				156AF431277E122A00816769 /* CreateProtocols.swift in Sources */,
 				156AF43B277E16B100816769 /* DetailInteractor.swift in Sources */,
+				156AF44D277E21A800816769 /* FMDatabaseQueue.m in Sources */,
 				156AF429277DF42800816769 /* HomeProtocols.swift in Sources */,
 				156AF435277E13C800816769 /* CreatePresenter.swift in Sources */,
 				156AF42F277DF90500816769 /* HomeRouter.swift in Sources */,
@@ -661,6 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -678,6 +728,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.Work-7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Work 7/Work 7-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -688,6 +740,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -705,6 +758,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.Work-7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Work 7/Work 7-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
