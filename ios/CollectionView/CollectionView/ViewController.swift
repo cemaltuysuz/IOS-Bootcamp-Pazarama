@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         countrieCollectionView.delegate = self
         countrieCollectionView.dataSource = self
         
-        let c1 = Country(countryId: 1, countryName: "Turkey", countryCapital: "Ankara")
-        let c2 = Country(countryId: 2, countryName: "France", countryCapital: "Paris")
+        let c1 = Country(countryId: 1, countryName: "Chennem", countryCapital: "Ankara")
+        let c2 = Country(countryId: 2, countryName: "Franceeee", countryCapital: "Paris")
         let c3 = Country(countryId: 3, countryName: "Italia", countryCapital: "Roma")
         let c4 = Country(countryId: 4, countryName: "England", countryCapital: "London")
         let c5 = Country(countryId: 5, countryName: "Japan", countryCapital: "Tokyo")
