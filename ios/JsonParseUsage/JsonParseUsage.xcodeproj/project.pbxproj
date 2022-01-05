@@ -16,6 +16,12 @@
 		15F085782783661000EF38FF /* JsonParseUsageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F085772783661000EF38FF /* JsonParseUsageTests.swift */; };
 		15F085822783661000EF38FF /* JsonParseUsageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F085812783661000EF38FF /* JsonParseUsageUITests.swift */; };
 		15F085842783661000EF38FF /* JsonParseUsageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F085832783661000EF38FF /* JsonParseUsageUITestsLaunchTests.swift */; };
+		15F08591278373EF00EF38FF /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F08590278373EF00EF38FF /* Kisiler.swift */; };
+		15F08593278374BD00EF38FF /* KisiCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F08592278374BD00EF38FF /* KisiCevap.swift */; };
+		15F08595278378F700EF38FF /* Kategori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F08594278378F700EF38FF /* Kategori.swift */; };
+		15F085972783792600EF38FF /* Yonetmen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F085962783792600EF38FF /* Yonetmen.swift */; };
+		15F085992783794600EF38FF /* Filmler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F085982783794600EF38FF /* Filmler.swift */; };
+		15F0859B27837AA400EF38FF /* FilmlerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0859A27837AA400EF38FF /* FilmlerCevap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		15F0857D2783661000EF38FF /* JsonParseUsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonParseUsageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F085812783661000EF38FF /* JsonParseUsageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParseUsageUITests.swift; sourceTree = "<group>"; };
 		15F085832783661000EF38FF /* JsonParseUsageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParseUsageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15F08590278373EF00EF38FF /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		15F08592278374BD00EF38FF /* KisiCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiCevap.swift; sourceTree = "<group>"; };
+		15F08594278378F700EF38FF /* Kategori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategori.swift; sourceTree = "<group>"; };
+		15F085962783792600EF38FF /* Yonetmen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yonetmen.swift; sourceTree = "<group>"; };
+		15F085982783794600EF38FF /* Filmler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filmler.swift; sourceTree = "<group>"; };
+		15F0859A27837AA400EF38FF /* FilmlerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmlerCevap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,12 @@
 				15F085692783660F00EF38FF /* Assets.xcassets */,
 				15F0856B2783660F00EF38FF /* LaunchScreen.storyboard */,
 				15F0856E2783660F00EF38FF /* Info.plist */,
+				15F08590278373EF00EF38FF /* Kisiler.swift */,
+				15F08592278374BD00EF38FF /* KisiCevap.swift */,
+				15F08594278378F700EF38FF /* Kategori.swift */,
+				15F085962783792600EF38FF /* Yonetmen.swift */,
+				15F085982783794600EF38FF /* Filmler.swift */,
+				15F0859A27837AA400EF38FF /* FilmlerCevap.swift */,
 			);
 			path = JsonParseUsage;
 			sourceTree = "<group>";
@@ -259,8 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				15F085652783660F00EF38FF /* ViewController.swift in Sources */,
+				15F085972783792600EF38FF /* Yonetmen.swift in Sources */,
 				15F085612783660F00EF38FF /* AppDelegate.swift in Sources */,
 				15F085632783660F00EF38FF /* SceneDelegate.swift in Sources */,
+				15F08595278378F700EF38FF /* Kategori.swift in Sources */,
+				15F085992783794600EF38FF /* Filmler.swift in Sources */,
+				15F08591278373EF00EF38FF /* Kisiler.swift in Sources */,
+				15F0859B27837AA400EF38FF /* FilmlerCevap.swift in Sources */,
+				15F08593278374BD00EF38FF /* KisiCevap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

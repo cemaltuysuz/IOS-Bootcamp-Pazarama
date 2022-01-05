@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FilimlerCevap : Codable {
-    var filimler:[Filmler]?
+class FilmlerCevap : Codable {
+    var filmler:[Filmler]?
     var success:Int?
 }

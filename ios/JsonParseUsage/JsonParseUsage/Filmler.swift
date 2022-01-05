@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Film:Codable {
+class Filmler:Codable {
     var film_id:String?
     var film_ad:String?
     var film_yil:String?

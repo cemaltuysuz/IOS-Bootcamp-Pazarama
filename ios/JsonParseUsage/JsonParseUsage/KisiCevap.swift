@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class KisiCevap:Codable {
+    var kisiler:[Kisi]?
+    var success:Int?
+}

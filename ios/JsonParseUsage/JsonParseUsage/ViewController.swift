@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //kisilerJsonParse()
-        filmlerJsonParse()
+        //filmlerJsonParse()
+        //kisilerCodableJsonParse()
+        filmCodableJsonParse()
     }
 
     func kisilerJsonParse(){
@@ -82,6 +84,73 @@ class ViewController: UIViewController {
                         print("********")
                         print("Success info :\(success)")
                     }
+                }
+            }catch{
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
+    
+    func kisilerCodableJsonParse(){
+        let url = URL(string: "http://kasimadalan.pe.hu/kisiler/tum_kisiler.php")
+        URLSession.shared.dataTask(with: url!){ (data,response,error) in
+            if error != nil || data == nil {
+                print("Error")
+                return
+            }
+            
+            do{
+                let cevap = try JSONDecoder().decode(KisiCevap.self, from: data!)
+                
+                if let kisiler = cevap.kisiler {
+                    for kisi in kisiler {
+                        print("*******")
+                        print("Kişi id : \(kisi.kisi_id!)")
+                        print("Kişi adı : \(kisi.kisi_ad!)")
+                        print("Kişi tel : \(kisi.kisi_tel!)")
+                    }
+                    
+                }
+                
+                if let success = cevap.success {
+                    print("*******")
+                    print("success : \(success)")
+                }
+            }catch{
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
+    
+    func filmCodableJsonParse(){
+        let url = URL(string: "http://kasimadalan.pe.hu/filmler/tum_filmler.php")
+        URLSession.shared.dataTask(with: url!){ (data,response,error) in
+            if error != nil || data == nil {
+                print("Error")
+                return
+            }
+            
+            do{
+                let cevap = try JSONDecoder().decode(FilmlerCevap.self, from: data!)
+                
+                if let filmler = cevap.filmler {
+                    for film in filmler {
+                        print("*******")
+                        print("Film id : \(film.film_id!)")
+                        print("Film ad : \(film.film_ad!)")
+                        print("Film yil : \(film.film_yil!)")
+                        print("Film resim : \(film.film_resim!)")
+                        print("Kategori id : \(film.kategori!.kategori_id!)")
+                        print("Kategori ad : \(film.kategori!.kategori_ad!)")
+                        print("Yonetmen id : \(film.yonetmen!.yonetmen_id!)")
+                        print("Yonetmen ad : \(film.yonetmen!.yonetmen_ad!)")
+                    }
+                    
+                }
+                
+                if let success = cevap.success {
+                    print("*******")
+                    print("success : \(success)")
                 }
             }catch{
                 print(error.localizedDescription)

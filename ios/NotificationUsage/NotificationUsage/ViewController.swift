@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
 extension ViewController :UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.banner, .sound, .sound])
+        completionHandler([.banner, .sound, .badge])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -63,7 +63,7 @@ extension ViewController :UNUserNotificationCenterDelegate {
             print("Arka planda iken bildirim tıklanıldı.")
         }
         
-        app.applicationIconBadgeNumber = 0
+      // app.applicationIconBadgeNumber = 0
         completionHandler()
     }
 }

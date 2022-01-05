@@ -1,13 +1,13 @@
 //
 //  Kisiler.swift
-//  JsonParseUsage
+//  KisilerUygulamasi
 //
-//  Created by cemal tüysüz on 3.01.2022.
+//  Created by Kasım Adalan on 18.12.2021.
 //
 
 import Foundation
 
-class Kisi : Codable {
+class Kisiler : Codable {
     var kisi_id:String?
     var kisi_ad:String?
     var kisi_tel:String?
