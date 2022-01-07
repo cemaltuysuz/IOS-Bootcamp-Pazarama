@@ -19,7 +19,6 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
                     let cevap = try JSONDecoder().decode(KisiCevap.self, from: data)
                     
                     if let kisilerListesi = cevap.kisiler {
-                        print("Kisiler geldi knk : \(kisilerListesi.count)")
                         self.anasayfaPresenter?.presenteraVeriGonder(kisilerListesi: kisilerListesi)
 
                     }
@@ -53,6 +52,21 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
     }
     
     func kisiSil(kisi_id: Int) {
-        print("\(kisi_id) silindi")
+        let parameters:Parameters = ["kisi_id": kisi_id]
+        
+        AF.request("http://kasimadalan.pe.hu/kisiler/delete_kisiler.php", method: .post, parameters: parameters).responseJSON{ response in
+            
+            if let data = response.data {
+                do{
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+                        print(json)
+                        self.tumKisileriAl()
+                    }
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
 }

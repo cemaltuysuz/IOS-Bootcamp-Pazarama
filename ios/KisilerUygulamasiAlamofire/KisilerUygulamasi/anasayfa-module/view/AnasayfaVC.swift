@@ -28,6 +28,10 @@ class AnasayfaVC: UIViewController {
         anasayfaPresenterNesnesi?.kisileriYukle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        anasayfaPresenterNesnesi?.kisileriYukle()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {
             let kisi = sender as? Kisiler
@@ -39,20 +43,16 @@ class AnasayfaVC: UIViewController {
 
 extension AnasayfaVC : PresenterToViewAnasayfaProtocol {
     func vieweVeriGonder(kisilerListesi: Array<Kisiler>) {
-        self.kisilerListe = kisilerListesi
-        self.kisilerTableView.reloadData()
+        DispatchQueue.main.async {
+            self.kisilerListe = kisilerListesi
+            self.kisilerTableView.reloadData()
+        }
     }
 }
 
 extension AnasayfaVC : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if !searchText.isEmpty {
-            
-            DispatchQueue.main.async {
-                self.anasayfaPresenterNesnesi?.ara(aramaKelimesi: searchText)
-            }
-            
-        }
+            self.anasayfaPresenterNesnesi?.ara(aramaKelimesi: searchText)
     }
 }
 
