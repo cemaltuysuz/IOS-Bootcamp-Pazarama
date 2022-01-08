@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15A00A22278A068C00B90088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00A21278A068C00B90088 /* AppDelegate.swift */; };
+		15A00A24278A068C00B90088 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00A23278A068C00B90088 /* SceneDelegate.swift */; };
+		15A00A26278A068C00B90088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00A25278A068C00B90088 /* ViewController.swift */; };
+		15A00A29278A068C00B90088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A00A27278A068C00B90088 /* Main.storyboard */; };
+		15A00A2B278A068D00B90088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A00A2A278A068D00B90088 /* Assets.xcassets */; };
+		15A00A2E278A068D00B90088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A00A2C278A068D00B90088 /* LaunchScreen.storyboard */; };
+		15A00A39278A068D00B90088 /* King_Fisher_UsageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00A38278A068D00B90088 /* King_Fisher_UsageTests.swift */; };
+		15A00A43278A068D00B90088 /* King_Fisher_UsageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00A42278A068D00B90088 /* King_Fisher_UsageUITests.swift */; };
+		15A00A45278A068D00B90088 /* King_Fisher_UsageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A00A44278A068D00B90088 /* King_Fisher_UsageUITestsLaunchTests.swift */; };
+		15A00A53278A073600B90088 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 15A00A52278A073600B90088 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15A00A35278A068D00B90088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15A00A16278A068C00B90088 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A00A1D278A068C00B90088;
+			remoteInfo = "King Fisher Usage";
+		};
+		15A00A3F278A068D00B90088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15A00A16278A068C00B90088 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A00A1D278A068C00B90088;
+			remoteInfo = "King Fisher Usage";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15A00A1E278A068C00B90088 /* King Fisher Usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King Fisher Usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A00A21278A068C00B90088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15A00A23278A068C00B90088 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		15A00A25278A068C00B90088 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15A00A28278A068C00B90088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15A00A2A278A068D00B90088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15A00A2D278A068D00B90088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15A00A2F278A068D00B90088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A00A34278A068D00B90088 /* King Fisher UsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "King Fisher UsageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A00A38278A068D00B90088 /* King_Fisher_UsageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_Fisher_UsageTests.swift; sourceTree = "<group>"; };
+		15A00A3E278A068D00B90088 /* King Fisher UsageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "King Fisher UsageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A00A42278A068D00B90088 /* King_Fisher_UsageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_Fisher_UsageUITests.swift; sourceTree = "<group>"; };
+		15A00A44278A068D00B90088 /* King_Fisher_UsageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_Fisher_UsageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15A00A1B278A068C00B90088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A00A53278A073600B90088 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A00A31278A068D00B90088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A00A3B278A068D00B90088 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15A00A15278A068C00B90088 = {
+			isa = PBXGroup;
+			children = (
+				15A00A20278A068C00B90088 /* King Fisher Usage */,
+				15A00A37278A068D00B90088 /* King Fisher UsageTests */,
+				15A00A41278A068D00B90088 /* King Fisher UsageUITests */,
+				15A00A1F278A068C00B90088 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15A00A1F278A068C00B90088 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15A00A1E278A068C00B90088 /* King Fisher Usage.app */,
+				15A00A34278A068D00B90088 /* King Fisher UsageTests.xctest */,
+				15A00A3E278A068D00B90088 /* King Fisher UsageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15A00A20278A068C00B90088 /* King Fisher Usage */ = {
+			isa = PBXGroup;
+			children = (
+				15A00A21278A068C00B90088 /* AppDelegate.swift */,
+				15A00A23278A068C00B90088 /* SceneDelegate.swift */,
+				15A00A25278A068C00B90088 /* ViewController.swift */,
+				15A00A27278A068C00B90088 /* Main.storyboard */,
+				15A00A2A278A068D00B90088 /* Assets.xcassets */,
+				15A00A2C278A068D00B90088 /* LaunchScreen.storyboard */,
+				15A00A2F278A068D00B90088 /* Info.plist */,
+			);
+			path = "King Fisher Usage";
+			sourceTree = "<group>";
+		};
+		15A00A37278A068D00B90088 /* King Fisher UsageTests */ = {
+			isa = PBXGroup;
+			children = (
+				15A00A38278A068D00B90088 /* King_Fisher_UsageTests.swift */,
+			);
+			path = "King Fisher UsageTests";
+			sourceTree = "<group>";
+		};
+		15A00A41278A068D00B90088 /* King Fisher UsageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				15A00A42278A068D00B90088 /* King_Fisher_UsageUITests.swift */,
+				15A00A44278A068D00B90088 /* King_Fisher_UsageUITestsLaunchTests.swift */,
+			);
+			path = "King Fisher UsageUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15A00A1D278A068C00B90088 /* King Fisher Usage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A00A48278A068D00B90088 /* Build configuration list for PBXNativeTarget "King Fisher Usage" */;
+			buildPhases = (
+				15A00A1A278A068C00B90088 /* Sources */,
+				15A00A1B278A068C00B90088 /* Frameworks */,
+				15A00A1C278A068C00B90088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "King Fisher Usage";
+			packageProductDependencies = (
+				15A00A52278A073600B90088 /* Kingfisher */,
+			);
+			productName = "King Fisher Usage";
+			productReference = 15A00A1E278A068C00B90088 /* King Fisher Usage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15A00A33278A068D00B90088 /* King Fisher UsageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A00A4B278A068D00B90088 /* Build configuration list for PBXNativeTarget "King Fisher UsageTests" */;
+			buildPhases = (
+				15A00A30278A068D00B90088 /* Sources */,
+				15A00A31278A068D00B90088 /* Frameworks */,
+				15A00A32278A068D00B90088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15A00A36278A068D00B90088 /* PBXTargetDependency */,
+			);
+			name = "King Fisher UsageTests";
+			productName = "King Fisher UsageTests";
+			productReference = 15A00A34278A068D00B90088 /* King Fisher UsageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15A00A3D278A068D00B90088 /* King Fisher UsageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A00A4E278A068D00B90088 /* Build configuration list for PBXNativeTarget "King Fisher UsageUITests" */;
+			buildPhases = (
+				15A00A3A278A068D00B90088 /* Sources */,
+				15A00A3B278A068D00B90088 /* Frameworks */,
+				15A00A3C278A068D00B90088 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15A00A40278A068D00B90088 /* PBXTargetDependency */,
+			);
+			name = "King Fisher UsageUITests";
+			productName = "King Fisher UsageUITests";
+			productReference = 15A00A3E278A068D00B90088 /* King Fisher UsageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15A00A16278A068C00B90088 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					15A00A1D278A068C00B90088 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					15A00A33278A068D00B90088 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 15A00A1D278A068C00B90088;
+					};
+					15A00A3D278A068D00B90088 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 15A00A1D278A068C00B90088;
+					};
+				};
+			};
+			buildConfigurationList = 15A00A19278A068C00B90088 /* Build configuration list for PBXProject "King Fisher Usage" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15A00A15278A068C00B90088;
+			packageReferences = (
+				15A00A51278A073600B90088 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = 15A00A1F278A068C00B90088 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15A00A1D278A068C00B90088 /* King Fisher Usage */,
+				15A00A33278A068D00B90088 /* King Fisher UsageTests */,
+				15A00A3D278A068D00B90088 /* King Fisher UsageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15A00A1C278A068C00B90088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A00A2E278A068D00B90088 /* LaunchScreen.storyboard in Resources */,
+				15A00A2B278A068D00B90088 /* Assets.xcassets in Resources */,
+				15A00A29278A068C00B90088 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A00A32278A068D00B90088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A00A3C278A068D00B90088 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15A00A1A278A068C00B90088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A00A26278A068C00B90088 /* ViewController.swift in Sources */,
+				15A00A22278A068C00B90088 /* AppDelegate.swift in Sources */,
+				15A00A24278A068C00B90088 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A00A30278A068D00B90088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A00A39278A068D00B90088 /* King_Fisher_UsageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A00A3A278A068D00B90088 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A00A45278A068D00B90088 /* King_Fisher_UsageUITestsLaunchTests.swift in Sources */,
+				15A00A43278A068D00B90088 /* King_Fisher_UsageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15A00A36278A068D00B90088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A00A1D278A068C00B90088 /* King Fisher Usage */;
+			targetProxy = 15A00A35278A068D00B90088 /* PBXContainerItemProxy */;
+		};
+		15A00A40278A068D00B90088 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A00A1D278A068C00B90088 /* King Fisher Usage */;
+			targetProxy = 15A00A3F278A068D00B90088 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15A00A27278A068C00B90088 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A00A28278A068C00B90088 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15A00A2C278A068D00B90088 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A00A2D278A068D00B90088 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15A00A46278A068D00B90088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15A00A47278A068D00B90088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15A00A49278A068D00B90088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "King Fisher Usage/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.King-Fisher-Usage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15A00A4A278A068D00B90088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "King Fisher Usage/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.King-Fisher-Usage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15A00A4C278A068D00B90088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.King-Fisher-UsageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/King Fisher Usage.app/King Fisher Usage";
+			};
+			name = Debug;
+		};
+		15A00A4D278A068D00B90088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.King-Fisher-UsageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/King Fisher Usage.app/King Fisher Usage";
+			};
+			name = Release;
+		};
+		15A00A4F278A068D00B90088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.King-Fisher-UsageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "King Fisher Usage";
+			};
+			name = Debug;
+		};
+		15A00A50278A068D00B90088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.King-Fisher-UsageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "King Fisher Usage";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15A00A19278A068C00B90088 /* Build configuration list for PBXProject "King Fisher Usage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A00A46278A068D00B90088 /* Debug */,
+				15A00A47278A068D00B90088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A00A48278A068D00B90088 /* Build configuration list for PBXNativeTarget "King Fisher Usage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A00A49278A068D00B90088 /* Debug */,
+				15A00A4A278A068D00B90088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A00A4B278A068D00B90088 /* Build configuration list for PBXNativeTarget "King Fisher UsageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A00A4C278A068D00B90088 /* Debug */,
+				15A00A4D278A068D00B90088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A00A4E278A068D00B90088 /* Build configuration list for PBXNativeTarget "King Fisher UsageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A00A4F278A068D00B90088 /* Debug */,
+				15A00A50278A068D00B90088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15A00A51278A073600B90088 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15A00A52278A073600B90088 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15A00A51278A073600B90088 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 15A00A16278A068C00B90088 /* Project object */;
+}
