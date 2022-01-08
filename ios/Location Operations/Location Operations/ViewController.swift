@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     
     var lm = CLLocationManager()
     
+    @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,9 +26,19 @@ class ViewController: UIViewController {
         lm.requestWhenInUseAuthorization()
         lm.startUpdatingLocation()
         
+        // 41.0370176,28.9763369,15z
+        let location = CLLocationCoordinate2D(latitude: 41.0370176, longitude: 28.9763369)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = location
+        pin.title = "My Location Title"
+        pin.subtitle = "My Location SubTitle"
+        
+        mapView.addAnnotation(pin)
     }
-
-
 }
 
 extension ViewController : CLLocationManagerDelegate {
