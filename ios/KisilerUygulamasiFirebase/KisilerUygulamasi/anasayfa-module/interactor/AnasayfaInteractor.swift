@@ -63,6 +63,6 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
     }
     
     func kisiSil(kisi_id: String) {
-        print("\(kisi_id) silindi")
+        ref.child("kisiler").child(kisi_id).removeValue()
     }
 }
