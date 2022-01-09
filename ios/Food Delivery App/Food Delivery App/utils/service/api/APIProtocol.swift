@@ -9,5 +9,5 @@ import Foundation
 
 protocol APIProtocol {
     
-    func allFoods() -> Resource<YemeklerCevap>
+    func allFoods(completionHandler: @escaping (Resource<YemeklerCevap>) -> Void)
 }

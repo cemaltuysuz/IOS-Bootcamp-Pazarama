@@ -9,11 +9,31 @@ import Foundation
 
 class FoodInteractor : PresenterToInteractorFood {
     var presenter: InteractorToPresenterFood?
+    let api:APIProtocol = API.shared
     
     func getFoods() {
-        var yemekler = [Yemekler]()
-        let yemek1 = Yemekler(yemek_id: "1", yemek_adi: "Iskender", yemek_resim_adi: "", yemek_fiyat: "15")
-        yemekler.append(yemek1)
-        presenter?.foodsToPresenter(yemekler: yemekler)
+        api.allFoods{ response in
+            switch response.status {
+            case .SUCCESS :
+                if let data = response.data?.yemekler {
+                    self.presenter?.indicatorVisibility(bool: false)
+                    self.presenter?.foodsToPresenter(yemekler: data)
+                }
+                break
+            case .ERROR :
+                if let data = response.message {
+                    print(data)
+                    self.presenter?.indicatorVisibility(bool: false)
+                }
+                break
+                
+            case .LOADING :
+                self.presenter?.indicatorVisibility(bool: true)
+                break
+                
+            default :
+                break
+            }
+        }
     }
 }

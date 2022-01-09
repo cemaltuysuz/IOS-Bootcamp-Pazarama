@@ -11,12 +11,13 @@ class FoodVC: UIViewController {
 
     var yemekler = [Yemekler]()
     var presenter: ViewToPresenterFood?
+    
     @IBOutlet weak var foodsTableView: UITableView!
+    @IBOutlet weak var foodIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        foodsTableView.isHidden = true
-        
+                
         FoodRouter.createModule(ref: self)
         
         foodsTableView.delegate = self
@@ -28,6 +29,14 @@ class FoodVC: UIViewController {
 }
 // Protocols
 extension FoodVC : PresenterToViewFood {
+    func indicatorVisibility(bool: Bool) {
+        if bool {
+            foodIndicator.startAnimating()
+        }else {
+            foodIndicator.stopAnimating()
+        }
+    }
+    
     func foodsToView(yemekler: [Yemekler]) {
         DispatchQueue.main.async {
             self.yemekler = yemekler
@@ -46,18 +55,12 @@ extension FoodVC : UITableViewDelegate, UITableViewDataSource {
         let currentFood = yemekler[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainMeals", for: indexPath) as! FoodTableViewCell
         
-        cell.selectionStyle = .none
-        cell.layer.borderColor = UIColor(named: "Grey200")?.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 5
-        
         cell.foodName.text = currentFood.yemek_adi!
         cell.foodPrice.text = "\(currentFood.yemek_fiyat!)₺"
         
         return cell
     }
-    
-    
+
 }
 
 

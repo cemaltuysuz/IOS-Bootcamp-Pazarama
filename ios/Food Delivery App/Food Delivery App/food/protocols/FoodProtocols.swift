@@ -22,10 +22,12 @@ protocol PresenterToInteractorFood {
 
 protocol InteractorToPresenterFood {
     func foodsToPresenter(yemekler:[Yemekler])
+    func indicatorVisibility(bool:Bool)
 }
 
 protocol PresenterToViewFood {
     func foodsToView(yemekler:[Yemekler])
+    func indicatorVisibility(bool:Bool)
 }
 
 protocol PresenterToRouterFood {

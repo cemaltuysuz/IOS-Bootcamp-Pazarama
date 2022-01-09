@@ -15,7 +15,7 @@ class Resource <T : Codable> {
     
     init(){}
     
-    init(status:Status, data:T, message:String){
+    init(status:Status, data:T?, message:String?){
         self.status = status
         self.data = data
         self.message = message
