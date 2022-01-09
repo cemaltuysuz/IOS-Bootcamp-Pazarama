@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FoodVC: UIViewController {
 
@@ -30,10 +31,12 @@ class FoodVC: UIViewController {
 // Protocols
 extension FoodVC : PresenterToViewFood {
     func indicatorVisibility(bool: Bool) {
-        if bool {
-            foodIndicator.startAnimating()
-        }else {
-            foodIndicator.stopAnimating()
+        DispatchQueue.main.async {
+            if bool {
+                self.foodIndicator.startAnimating()
+            }else {
+                self.foodIndicator.stopAnimating()
+            }
         }
     }
     
@@ -54,10 +57,12 @@ extension FoodVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let currentFood = yemekler[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainMeals", for: indexPath) as! FoodTableViewCell
+        let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(currentFood.yemek_resim_adi!)")!
         
         cell.foodName.text = currentFood.yemek_adi!
         cell.foodPrice.text = "\(currentFood.yemek_fiyat!)₺"
-        
+        cell.foodImage.kf.setImage(with: url)
+                            
         return cell
     }
 

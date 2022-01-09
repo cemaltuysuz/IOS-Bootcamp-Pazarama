@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-rt-Aie">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-rt-Aie">
                                 <rect key="frame" x="10" y="98" width="394" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
@@ -53,15 +53,44 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQz-3U-dKY">
                                                             <rect key="frame" x="0.0" y="0.0" width="246" height="42.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yemek Adi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owe-YB-mS5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="123" height="36"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Adi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owe-YB-mS5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="123" height="42.5"/>
                                                                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZo-9z-zhJ">
+                                                                    <rect key="frame" x="133" y="6.5" width="30" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IT-bm-tax">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="13"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" name="Black500"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="1IT-bm-tax" secondAttribute="bottom" id="19t-Gy-haW"/>
+                                                                        <constraint firstItem="1IT-bm-tax" firstAttribute="top" secondItem="dZo-9z-zhJ" secondAttribute="top" id="6JL-iA-2Gl"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="1IT-bm-tax" secondAttribute="trailing" id="A6D-oo-wgR"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="Eec-i2-Zn9"/>
+                                                                        <constraint firstItem="1IT-bm-tax" firstAttribute="leading" secondItem="dZo-9z-zhJ" secondAttribute="leading" id="Wdb-ul-SLv"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="zyd-zz-UEg"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="dZo-9z-zhJ" firstAttribute="leading" secondItem="owe-YB-mS5" secondAttribute="trailing" constant="10" id="7wX-8K-hUS"/>
+                                                                <constraint firstItem="owe-YB-mS5" firstAttribute="top" secondItem="rQz-3U-dKY" secondAttribute="top" id="Kda-aN-RMF"/>
+                                                                <constraint firstAttribute="bottom" secondItem="owe-YB-mS5" secondAttribute="bottom" id="YyM-HN-Adm"/>
+                                                                <constraint firstItem="dZo-9z-zhJ" firstAttribute="centerY" secondItem="rQz-3U-dKY" secondAttribute="centerY" id="uOE-gw-keR"/>
+                                                                <constraint firstItem="owe-YB-mS5" firstAttribute="leading" secondItem="rQz-3U-dKY" secondAttribute="leading" id="zHi-2k-wUI"/>
+                                                            </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem impsun dolor sit amet, lorem impsun dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REm-aG-hST">
                                                             <rect key="frame" x="0.0" y="42.5" width="246" height="43"/>
@@ -72,14 +101,21 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZM4-gR-6u1">
                                                             <rect key="frame" x="0.0" y="85.5" width="246" height="42.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.70₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-S6-X6B">
-                                                                    <rect key="frame" x="0.0" y="7.5" width="64" height="27.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="147₺" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-S6-X6B">
+                                                                    <rect key="frame" x="0.0" y="7.5" width="50" height="27.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="5Kx-Oe-ER9"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOH-oc-FVv">
-                                                                    <rect key="frame" x="64" y="5.5" width="45.5" height="31"/>
+                                                                    <rect key="frame" x="55" y="12.5" width="17" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="17" id="W2I-21-I4a"/>
+                                                                        <constraint firstAttribute="height" constant="17" id="WqR-nv-WnG"/>
+                                                                    </constraints>
                                                                     <color key="tintColor" name="Black500"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="plus.square.fill" catalog="system"/>
@@ -91,9 +127,9 @@
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="aNy-S6-X6B" firstAttribute="centerY" secondItem="ZM4-gR-6u1" secondAttribute="centerY" id="Dre-x2-BKA"/>
-                                                                <constraint firstItem="NOH-oc-FVv" firstAttribute="leading" secondItem="aNy-S6-X6B" secondAttribute="trailing" id="H0n-8e-GaS"/>
+                                                                <constraint firstItem="NOH-oc-FVv" firstAttribute="centerY" secondItem="ZM4-gR-6u1" secondAttribute="centerY" id="JW8-in-oTy"/>
+                                                                <constraint firstItem="NOH-oc-FVv" firstAttribute="leading" secondItem="aNy-S6-X6B" secondAttribute="trailing" constant="5" id="VaU-Xr-gdE"/>
                                                                 <constraint firstItem="aNy-S6-X6B" firstAttribute="leading" secondItem="ZM4-gR-6u1" secondAttribute="leading" id="kDc-A5-xFr"/>
-                                                                <constraint firstItem="NOH-oc-FVv" firstAttribute="centerY" secondItem="ZM4-gR-6u1" secondAttribute="centerY" id="pQI-C5-JSk"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
