@@ -8,7 +8,13 @@
 import UIKit
 
 class FoodTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var foodName: UILabel!
+    @IBOutlet weak var foodPrice: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +25,8 @@ class FoodTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    @IBAction func foodInsertToCartButton(_ sender: Any) {
+        
+    }
+    
 }

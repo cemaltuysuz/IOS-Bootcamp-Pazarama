@@ -8,8 +8,16 @@
 import Foundation
 
 class FoodPresenter : InteractorToPresenterFood,ViewToPresenterFood {
+    
     var interactor: PresenterToInteractorFood?
     var view: PresenterToViewFood?
     
+    func foodsToPresenter(yemekler: [Yemekler]) {
+        view?.foodsToView(yemekler: yemekler)
+    }
+    
+    func getAllFoods() {
+        interactor?.getFoods()
+    }
     
 }

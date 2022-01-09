@@ -9,7 +9,7 @@ import Foundation
 
 class FoodRouter : PresenterToRouterFood {
     
-    static func createModule(ref: MealsVC) {
+    static func createModule(ref: FoodVC) {
         let presenter = FoodPresenter()
         
         ref.presenter = presenter

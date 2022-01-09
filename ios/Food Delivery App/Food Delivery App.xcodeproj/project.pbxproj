@@ -19,13 +19,16 @@
 		1511DAFC278AE1AE000938A2 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1511DAF9278AE1AE000938A2 /* Manrope-Medium.ttf */; };
 		1511DAFD278AE1AE000938A2 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1511DAFA278AE1AE000938A2 /* Manrope-Bold.ttf */; };
 		1511DAFF278AEDBA000938A2 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DAFE278AEDBA000938A2 /* FoodTableViewCell.swift */; };
-		1511DB02278AEEBC000938A2 /* MealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB01278AEEBC000938A2 /* MealsVC.swift */; };
+		1511DB02278AEEBC000938A2 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB01278AEEBC000938A2 /* FoodVC.swift */; };
 		1511DB04278AEEE1000938A2 /* FoodProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB03278AEEE1000938A2 /* FoodProtocols.swift */; };
 		1511DB06278AEFDD000938A2 /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB05278AEFDD000938A2 /* Yemekler.swift */; };
 		1511DB08278AF0D3000938A2 /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB07278AF0D3000938A2 /* YemeklerCevap.swift */; };
 		1511DB0A278B2885000938A2 /* FoodInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB09278B2885000938A2 /* FoodInteractor.swift */; };
 		1511DB0C278B2948000938A2 /* FoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB0B278B2948000938A2 /* FoodPresenter.swift */; };
 		1511DB0E278B2AC3000938A2 /* FoodRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB0D278B2AC3000938A2 /* FoodRouter.swift */; };
+		1511DB14278B3DD9000938A2 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB13278B3DD9000938A2 /* APIProtocol.swift */; };
+		1511DB17278B3EEA000938A2 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB16278B3EEA000938A2 /* Resource.swift */; };
+		1511DB19278B46D1000938A2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB18278B46D1000938A2 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,13 +65,16 @@
 		1511DAF9278AE1AE000938A2 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		1511DAFA278AE1AE000938A2 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		1511DAFE278AEDBA000938A2 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
-		1511DB01278AEEBC000938A2 /* MealsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsVC.swift; sourceTree = "<group>"; };
+		1511DB01278AEEBC000938A2 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 		1511DB03278AEEE1000938A2 /* FoodProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProtocols.swift; sourceTree = "<group>"; };
 		1511DB05278AEFDD000938A2 /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
 		1511DB07278AF0D3000938A2 /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
 		1511DB09278B2885000938A2 /* FoodInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInteractor.swift; sourceTree = "<group>"; };
 		1511DB0B278B2948000938A2 /* FoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPresenter.swift; sourceTree = "<group>"; };
 		1511DB0D278B2AC3000938A2 /* FoodRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRouter.swift; sourceTree = "<group>"; };
+		1511DB13278B3DD9000938A2 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		1511DB16278B3EEA000938A2 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		1511DB18278B46D1000938A2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		1511DAB1278ACF37000938A2 /* Food Delivery App */ = {
 			isa = PBXGroup;
 			children = (
+				1511DB0F278B3D99000938A2 /* utils */,
 				1511DAE2278AD3E2000938A2 /* food */,
 				1511DAE3278AD3F5000938A2 /* cart */,
 				1511DAE4278AD3FD000938A2 /* favorite */,
@@ -193,7 +200,7 @@
 		1511DAE5278AD42C000938A2 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				1511DB01278AEEBC000938A2 /* MealsVC.swift */,
+				1511DB01278AEEBC000938A2 /* FoodVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -341,6 +348,32 @@
 			path = tableview;
 			sourceTree = "<group>";
 		};
+		1511DB0F278B3D99000938A2 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1511DB10278B3DA2000938A2 /* service */,
+				1511DB16278B3EEA000938A2 /* Resource.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		1511DB10278B3DA2000938A2 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				1511DB11278B3DB2000938A2 /* api */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		1511DB11278B3DB2000938A2 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				1511DB13278B3DD9000938A2 /* APIProtocol.swift */,
+				1511DB18278B46D1000938A2 /* API.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -477,12 +510,15 @@
 			files = (
 				1511DAB3278ACF37000938A2 /* AppDelegate.swift in Sources */,
 				1511DB0C278B2948000938A2 /* FoodPresenter.swift in Sources */,
+				1511DB14278B3DD9000938A2 /* APIProtocol.swift in Sources */,
 				1511DAB5278ACF37000938A2 /* SceneDelegate.swift in Sources */,
 				1511DB0A278B2885000938A2 /* FoodInteractor.swift in Sources */,
 				1511DB08278AF0D3000938A2 /* YemeklerCevap.swift in Sources */,
 				1511DB04278AEEE1000938A2 /* FoodProtocols.swift in Sources */,
 				1511DAFF278AEDBA000938A2 /* FoodTableViewCell.swift in Sources */,
-				1511DB02278AEEBC000938A2 /* MealsVC.swift in Sources */,
+				1511DB19278B46D1000938A2 /* API.swift in Sources */,
+				1511DB02278AEEBC000938A2 /* FoodVC.swift in Sources */,
+				1511DB17278B3EEA000938A2 /* Resource.swift in Sources */,
 				1511DB0E278B2AC3000938A2 /* FoodRouter.swift in Sources */,
 				1511DB06278AEFDD000938A2 /* Yemekler.swift in Sources */,
 			);

@@ -10,20 +10,24 @@ import Foundation
 protocol ViewToPresenterFood {
     var interactor:PresenterToInteractorFood? {get set}
     var view:PresenterToViewFood? {get set}
+    
+    func getAllFoods()
 }
 
 protocol PresenterToInteractorFood {
     var presenter:InteractorToPresenterFood? {get set}
     
+    func getFoods()
 }
 
 protocol InteractorToPresenterFood {
+    func foodsToPresenter(yemekler:[Yemekler])
 }
 
 protocol PresenterToViewFood {
-    
+    func foodsToView(yemekler:[Yemekler])
 }
 
 protocol PresenterToRouterFood {
-    static func createModule(ref:MealsVC)
+    static func createModule(ref:FoodVC)
 }
