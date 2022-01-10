@@ -27,6 +27,14 @@ class FoodVC: UIViewController {
         presenter?.getAllFoods()
                 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFoodDetail" {
+            let targetVC = segue.destination as! FoodDetailVC
+            let food = sender as! Yemekler
+            targetVC.food = food
+        }
+    }
 }
 // Protocols
 extension FoodVC : PresenterToViewFood {
@@ -64,6 +72,10 @@ extension FoodVC : UITableViewDelegate, UITableViewDataSource {
         cell.foodImage.kf.setImage(with: url)
                             
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toFoodDetail", sender: yemekler[indexPath.row])
     }
 
 }
