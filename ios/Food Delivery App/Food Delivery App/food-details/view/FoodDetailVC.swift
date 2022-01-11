@@ -16,6 +16,8 @@ class FoodDetailVC: UIViewController {
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var addToFavorites: UIBarButtonItem!
     
+    var alert:MyAlert?
+    
     var presenter:ViewToPresenterFoodDetail?
     
     var food:Yemekler?
@@ -33,6 +35,8 @@ class FoodDetailVC: UIViewController {
         if let yemek = food {
             foodNameDetail.text = yemek.yemek_adi!
             foodPrice.text = "\(yemek.yemek_fiyat!)₺"
+            let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(yemek.yemek_resim_adi!)")!
+            foodImageDetail.kf.setImage(with: url)
         }
 
     }
@@ -71,11 +75,26 @@ class FoodDetailVC: UIViewController {
     }
     
     @IBAction func addToFavoritesButton(_ sender: Any) {
-        
+    }
+    
+    @objc func dismissAlert(){
+        alert?.dismissAlert()
     }
     
 }
 
 extension FoodDetailVC : PresenterToViewFoodDetail {
-    
+    func addToCartStatus(bool: Bool) {
+        if bool {
+            alert = MyAlert()
+            alert!.showAlert(with: "Sepete ekleme durumu",
+                            message: "Başarılı",
+                            viewController: self)
+        }else {
+            alert = MyAlert()
+            alert!.showAlert(with: "Sepete ekleme durumu",
+                            message: "Başarısız",
+                            viewController: self)
+        }
+    }
 }

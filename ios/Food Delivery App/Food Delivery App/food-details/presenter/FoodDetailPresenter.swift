@@ -13,6 +13,10 @@ class FoodDetailPresenter : ViewToPresenterFoodDetail, InteractorToPresenterFood
     var interactor: PresenterToInteractorFoodDetail?
     
     func addToCart(food: Yemekler, amount: Int) {
-        interactor?.addToChart(food: food, amount: amount)
+        interactor?.addToCart(food: food, amount: amount)
+    }
+    
+    func addToCartStatus(bool: Bool) {
+        view?.addToCartStatus(bool: bool)
     }
 }

@@ -37,6 +37,9 @@
 		15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */; };
 		1558098A278CA104006F0D69 /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580989278CA104006F0D69 /* FoodDetailRouter.swift */; };
 		1558098E278CA74A006F0D69 /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558098D278CA74A006F0D69 /* SimpleResponse.swift */; };
+		1593013C278DCE64003C9A20 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1593013B278DCE64003C9A20 /* Cart.swift */; };
+		1593013E278DCF15003C9A20 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1593013D278DCF15003C9A20 /* CartResponse.swift */; };
+		15930140278DD09B003C9A20 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1593013F278DD09B003C9A20 /* CustomAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
 		15580989278CA104006F0D69 /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
 		1558098D278CA74A006F0D69 /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
+		1593013B278DCE64003C9A20 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		1593013D278DCF15003C9A20 /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
+		1593013F278DD09B003C9A20 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +147,11 @@
 		1511DAB1278ACF37000938A2 /* Food Delivery App */ = {
 			isa = PBXGroup;
 			children = (
-				1511DB20278B7C88000938A2 /* food-details */,
-				1511DB0F278B3D99000938A2 /* utils */,
 				1511DAE2278AD3E2000938A2 /* food */,
+				1511DB20278B7C88000938A2 /* food-details */,
 				1511DAE3278AD3F5000938A2 /* cart */,
 				1511DAE4278AD3FD000938A2 /* favorite */,
+				1511DB0F278B3D99000938A2 /* utils */,
 				1511DAB2278ACF37000938A2 /* AppDelegate.swift */,
 				1511DAB4278ACF37000938A2 /* SceneDelegate.swift */,
 				1511DAB8278ACF37000938A2 /* Main.storyboard */,
@@ -294,6 +300,8 @@
 		1511DAEF278AD4E7000938A2 /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				1593013B278DCE64003C9A20 /* Cart.swift */,
+				1593013D278DCF15003C9A20 /* CartResponse.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -440,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				1511DB27278B7CD9000938A2 /* FoodDetailVC.swift */,
+				1593013F278DD09B003C9A20 /* CustomAlert.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -605,7 +614,9 @@
 				1511DB04278AEEE1000938A2 /* FoodProtocols.swift in Sources */,
 				1511DAFF278AEDBA000938A2 /* FoodTableViewCell.swift in Sources */,
 				1511DB19278B46D1000938A2 /* API.swift in Sources */,
+				15930140278DD09B003C9A20 /* CustomAlert.swift in Sources */,
 				1511DB02278AEEBC000938A2 /* FoodVC.swift in Sources */,
+				1593013E278DCF15003C9A20 /* CartResponse.swift in Sources */,
 				1558098E278CA74A006F0D69 /* SimpleResponse.swift in Sources */,
 				15580986278CA0DD006F0D69 /* FoodDetailInteractor.swift in Sources */,
 				1511DB17278B3EEA000938A2 /* Resource.swift in Sources */,
@@ -613,6 +624,7 @@
 				1511DB06278AEFDD000938A2 /* Yemekler.swift in Sources */,
 				1511DB28278B7CD9000938A2 /* FoodDetailVC.swift in Sources */,
 				15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */,
+				1593013C278DCE64003C9A20 /* Cart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
