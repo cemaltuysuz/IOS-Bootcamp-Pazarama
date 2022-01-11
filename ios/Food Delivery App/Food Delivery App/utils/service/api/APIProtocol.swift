@@ -13,5 +13,7 @@ protocol APIProtocol {
     func allFoods(completionHandler: @escaping (Resource<YemeklerCevap>) -> Void)
     
     func addToCart(params:Parameters,completionHandler: @escaping (Resource<SimpleResponse>) -> Void)
+    
+    func getCart(params:Parameters,completionHandler: @escaping (Resource<CartResponse>) -> Void)
 
 }

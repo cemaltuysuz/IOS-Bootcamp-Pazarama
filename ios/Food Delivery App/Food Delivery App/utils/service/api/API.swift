@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class API : APIProtocol {
-    
     static let shared = API()
     
     func allFoods(completionHandler: @escaping (Resource<YemeklerCevap>) -> Void) {
@@ -50,6 +49,28 @@ class API : APIProtocol {
                 }
             }else {
                 completionHandler(Resource<SimpleResponse>(status: .ERROR, data: nil, message: "Data is null"))
+            }
+        }
+    }
+    
+    func getCart(params: Parameters, completionHandler: @escaping (Resource<CartResponse>) -> Void) {
+        
+        // Loading
+        completionHandler(Resource<CartResponse>(status: .LOADING, data: nil, message: nil))
+        
+        let request = AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: params)
+        
+        request.responseJSON{response in
+            // Check Data
+            if let incData = response.data {
+                do{
+                    let resp = try JSONDecoder().decode(CartResponse.self, from: incData)
+                    completionHandler(Resource<CartResponse>(status: .SUCCESS, data: resp, message: "Success"))
+                }catch{
+                    completionHandler(Resource<CartResponse>(status: .ERROR, data: nil, message: error.localizedDescription))
+                }
+            }else {
+                completionHandler(Resource<CartResponse>(status: .ERROR, data: nil, message: "Data is null"))
             }
         }
     }

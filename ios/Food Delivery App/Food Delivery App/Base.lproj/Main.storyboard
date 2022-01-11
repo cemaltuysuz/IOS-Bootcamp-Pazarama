@@ -234,6 +234,9 @@
                                                             <color key="tintColor" name="Black500"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="reduceAmountCart:" destination="Bpv-GF-qyd" eventType="touchUpInside" id="i6w-W3-2n5"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK7-Qa-ffc">
                                                             <rect key="frame" x="35" y="0.0" width="18.5" height="25"/>
@@ -249,6 +252,9 @@
                                                             <color key="tintColor" name="Black500"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="increaseAmountCart:" destination="Bpv-GF-qyd" eventType="touchUpInside" id="gTh-Vn-4RE"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -267,6 +273,9 @@
                                                     <color key="tintColor" name="Black500"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="xmark.circle" catalog="system" buttonSize="small"/>
+                                                    <connections>
+                                                        <action selector="deleteFoodFromCart:" destination="Bpv-GF-qyd" eventType="touchUpInside" id="MSc-9c-elz"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -282,6 +291,12 @@
                                                 <constraint firstItem="OJZ-6Y-701" firstAttribute="centerX" secondItem="paj-fz-cXA" secondAttribute="centerX" id="uSO-tF-tya"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodAmountCart" destination="uK7-Qa-ffc" id="x1m-WN-MuZ"/>
+                                            <outlet property="foodImageFromCart" destination="0Fv-Ly-tbt" id="qFk-Ry-9vC"/>
+                                            <outlet property="foodNameFromCart" destination="eZh-TB-CF1" id="iQ1-jl-ku1"/>
+                                            <outlet property="totalPriceFood" destination="sJl-Sr-JMZ" id="CfE-8P-bdO"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
