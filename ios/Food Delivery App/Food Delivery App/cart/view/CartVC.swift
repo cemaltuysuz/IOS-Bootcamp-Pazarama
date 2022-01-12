@@ -11,11 +11,14 @@ class CartVC: UIViewController {
 
     @IBOutlet weak var cartCollectionView: UICollectionView!
     
+    @IBOutlet weak var pageTotalLabel: UILabel!
     var cartList:[Cart]?
     var presenter:ViewToPresenterCartProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cartList = [Cart]()
         
         CartRouter.createModule(ref: self)
         
@@ -46,24 +49,30 @@ class CartVC: UIViewController {
     }
 }
 
-
+// Presenter to View
 extension CartVC : PresenterToViewCartProtocol {
     func cartToView(items: [Cart]) {
         DispatchQueue.main.async {
+            var totalPrice = 0
             self.cartList = items
             self.cartCollectionView.reloadData()
+            for index in items {
+                totalPrice = totalPrice + (Int(index.yemek_fiyat!)! * Int(index.yemek_siparis_adet!)!)
+            }
+            self.pageTotalLabel.text = "\(totalPrice)₺"
         }
     }
 }
 
+// CollectionView
 extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cartList?.count ?? 8
+        return cartList!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var currentCart = cartList?[indexPath.row]
+        let currentCart = cartList?[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartCollectionViewCell", for: indexPath) as! CartCollectionViewCell
         
         cell.layer.masksToBounds = true
@@ -74,7 +83,7 @@ extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource {
         if let cart = currentCart {
             cell.foodNameFromCart.text = cart.yemek_adi
             cell.foodAmountCart.text = "x\(cart.yemek_siparis_adet!)"
-            cell.totalPriceFood.text = cart.yemek_fiyat
+            cell.totalPriceFood.text = "\(Int(cart.yemek_fiyat!)! * Int(cart.yemek_siparis_adet!)!)₺"
             let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cart.yemek_resim_adi!)")!
             cell.foodImageFromCart.kf.setImage(with: url)
         }

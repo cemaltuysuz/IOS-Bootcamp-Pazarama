@@ -36,4 +36,8 @@ class FoodInteractor : PresenterToInteractorFood {
             }
         }
     }
+    
+    func searchFood(searchText: String) {
+        print(searchText)
+    }
 }

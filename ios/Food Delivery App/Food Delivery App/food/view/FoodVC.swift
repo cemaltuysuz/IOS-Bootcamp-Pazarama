@@ -12,17 +12,24 @@ class FoodVC: UIViewController {
 
     var yemekler = [Yemekler]()
     var presenter: ViewToPresenterFood?
+    private var pendingRequestWorkItem: DispatchWorkItem?
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var dataNotFoundLabel: UILabel!
     @IBOutlet weak var foodsTableView: UITableView!
     @IBOutlet weak var foodIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UserDefaultService.shared.addToCart(foodId: 1, key: "")
                 
         FoodRouter.createModule(ref: self)
         
+        searchBar.delegate = self
         foodsTableView.delegate = self
         foodsTableView.dataSource = self
+        
         
         presenter?.getAllFoods()
                 
@@ -36,6 +43,22 @@ class FoodVC: UIViewController {
         }
     }
 }
+
+extension FoodVC : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        pendingRequestWorkItem?.cancel()
+        
+        let requestWorkItem = DispatchWorkItem { [weak self] in
+                self?.presenter?.searchFood(searchText: searchText)
+        }
+        pendingRequestWorkItem = requestWorkItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250),
+                                              execute: requestWorkItem)
+        
+        
+    }
+}
+
 // Protocols
 extension FoodVC : PresenterToViewFood {
     func indicatorVisibility(bool: Bool) {
@@ -53,6 +76,10 @@ extension FoodVC : PresenterToViewFood {
             self.yemekler = yemekler
             self.foodsTableView.reloadData()
         }
+    }
+    
+    func searchResults(results: [Yemekler]) {
+        
     }
 }
 

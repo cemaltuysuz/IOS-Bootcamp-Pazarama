@@ -12,22 +12,27 @@ protocol ViewToPresenterFood {
     var view:PresenterToViewFood? {get set}
     
     func getAllFoods()
+    func searchFood(searchText:String)
 }
 
 protocol PresenterToInteractorFood {
     var presenter:InteractorToPresenterFood? {get set}
     
+    func searchFood(searchText:String)
     func getFoods()
 }
 
 protocol InteractorToPresenterFood {
     func foodsToPresenter(yemekler:[Yemekler])
     func indicatorVisibility(bool:Bool)
+    
+    func searchResults(results:[Yemekler])
 }
 
 protocol PresenterToViewFood {
     func foodsToView(yemekler:[Yemekler])
     func indicatorVisibility(bool:Bool)
+    func searchResults(results:[Yemekler])
 }
 
 protocol PresenterToRouterFood {

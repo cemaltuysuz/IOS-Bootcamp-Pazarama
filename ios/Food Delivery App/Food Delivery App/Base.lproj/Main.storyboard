@@ -29,9 +29,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="90Y-Qi-FwC">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
                             <searchBar contentMode="redraw" placeholder="Yemek Ara" translatesAutoresizingMaskIntoConstraints="NO" id="aGK-Qv-q6N">
                                 <rect key="frame" x="0.0" y="140" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -140,6 +137,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="90Y-Qi-FwC">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veri bulunamadi !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9uB-RU-eJ4">
+                                <rect key="frame" x="10" y="434" width="394" height="27.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Manrope-Bold" family="Manrope" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,8 +164,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Yemekler" id="fZp-3l-aMA"/>
                     <connections>
+                        <outlet property="dataNotFoundLabel" destination="9uB-RU-eJ4" id="1aq-D4-0SQ"/>
                         <outlet property="foodIndicator" destination="90Y-Qi-FwC" id="Cjb-hL-3oF"/>
                         <outlet property="foodsTableView" destination="BV4-rt-Aie" id="hsx-sU-9r2"/>
+                        <outlet property="searchBar" destination="aGK-Qv-q6N" id="PL1-r8-IzO"/>
                         <segue destination="cIQ-Zk-cUI" kind="show" identifier="toFoodDetail" id="2ZJ-nb-Ft8"/>
                     </connections>
                 </viewController>
@@ -336,6 +345,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cartCollectionView" destination="f7c-7M-CJO" id="Bob-g0-qsh"/>
+                        <outlet property="pageTotalLabel" destination="RkT-6Y-5in" id="oAW-Ye-9Lr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IL6-EH-OlF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

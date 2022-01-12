@@ -10,7 +10,7 @@ import UIKit
 
 class MyAlert {
     
-    struct Constants {
+    struct AlertValues {
         static let backgroundAlphaTo : CGFloat = 0.6
     }
     
@@ -92,7 +92,7 @@ class MyAlert {
         
         UIView.animate(withDuration: 0.25,
                        animations: {
-            self.backgroundView.alpha = Constants.backgroundAlphaTo
+            self.backgroundView.alpha = AlertValues.backgroundAlphaTo
         }, completion: { done in
             if done {
                 UIView.animate(withDuration: 0.25, animations: {

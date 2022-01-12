@@ -38,6 +38,9 @@
 		15158AFE278DFE0700F11D93 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15158AFD278DFE0700F11D93 /* CartInteractor.swift */; };
 		15158B00278DFE3F00F11D93 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15158AFF278DFE3F00F11D93 /* CartPresenter.swift */; };
 		15158B02278DFE7100F11D93 /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15158B01278DFE7100F11D93 /* CartRouter.swift */; };
+		152CA04F278ED94D00A4BA28 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA04E278ED94D00A4BA28 /* UserDefaultProtocol.swift */; };
+		152CA051278ED9DA00A4BA28 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA050278ED9DA00A4BA28 /* Constants.swift */; };
+		152CA053278EDA7000A4BA28 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA052278EDA7000A4BA28 /* UserDefaultService.swift */; };
 		15580984278C9B88006F0D69 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */; };
 		15580986278CA0DD006F0D69 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */; };
 		15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */; };
@@ -99,6 +102,9 @@
 		15158AFD278DFE0700F11D93 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
 		15158AFF278DFE3F00F11D93 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		15158B01278DFE7100F11D93 /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
+		152CA04E278ED94D00A4BA28 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
+		152CA050278ED9DA00A4BA28 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		152CA052278EDA7000A4BA28 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
 		15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
 		15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
 		15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
@@ -397,6 +403,7 @@
 				1511DB10278B3DA2000938A2 /* service */,
 				1511DB16278B3EEA000938A2 /* Resource.swift */,
 				1558098D278CA74A006F0D69 /* SimpleResponse.swift */,
+				152CA050278ED9DA00A4BA28 /* Constants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -404,6 +411,7 @@
 		1511DB10278B3DA2000938A2 /* service */ = {
 			isa = PBXGroup;
 			children = (
+				152CA04D278ED93800A4BA28 /* userdefault */,
 				1511DB11278B3DB2000938A2 /* api */,
 			);
 			path = service;
@@ -485,6 +493,15 @@
 				15158AF9278DF60C00F11D93 /* CartCollectionViewCell.swift */,
 			);
 			path = "collection-view";
+			sourceTree = "<group>";
+		};
+		152CA04D278ED93800A4BA28 /* userdefault */ = {
+			isa = PBXGroup;
+			children = (
+				152CA04E278ED94D00A4BA28 /* UserDefaultProtocol.swift */,
+				152CA052278EDA7000A4BA28 /* UserDefaultService.swift */,
+			);
+			path = userdefault;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,8 +651,10 @@
 				15580984278C9B88006F0D69 /* FoodDetailProtocols.swift in Sources */,
 				1558098A278CA104006F0D69 /* FoodDetailRouter.swift in Sources */,
 				15158AFC278DFC6200F11D93 /* CartProtocols.swift in Sources */,
+				152CA051278ED9DA00A4BA28 /* Constants.swift in Sources */,
 				1511DB14278B3DD9000938A2 /* APIProtocol.swift in Sources */,
 				1511DAB5278ACF37000938A2 /* SceneDelegate.swift in Sources */,
+				152CA04F278ED94D00A4BA28 /* UserDefaultProtocol.swift in Sources */,
 				1511DB0A278B2885000938A2 /* FoodInteractor.swift in Sources */,
 				1511DB08278AF0D3000938A2 /* YemeklerCevap.swift in Sources */,
 				1511DB04278AEEE1000938A2 /* FoodProtocols.swift in Sources */,
@@ -645,6 +664,7 @@
 				15158AF7278DF56900F11D93 /* CartVC.swift in Sources */,
 				15930140278DD09B003C9A20 /* CustomAlert.swift in Sources */,
 				1511DB02278AEEBC000938A2 /* FoodVC.swift in Sources */,
+				152CA053278EDA7000A4BA28 /* UserDefaultService.swift in Sources */,
 				1593013E278DCF15003C9A20 /* CartResponse.swift in Sources */,
 				1558098E278CA74A006F0D69 /* SimpleResponse.swift in Sources */,
 				15158B02278DFE7100F11D93 /* CartRouter.swift in Sources */,
