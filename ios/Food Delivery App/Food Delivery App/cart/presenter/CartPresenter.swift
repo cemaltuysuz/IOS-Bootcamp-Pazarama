@@ -19,5 +19,13 @@ class CartPresenter : ViewToPresenterCartProtocol, InteractorToPresenterCartProt
         self.view?.cartToView(items: items)
     }
     
+    func deleteCart() {
+        interactor?.deleteCart()
+    }
+    
+    func deleteFoodFromCart(foodName: String) {
+        interactor?.deleteFoodFromCart(foodName: foodName)
+    }
+    
     
 }

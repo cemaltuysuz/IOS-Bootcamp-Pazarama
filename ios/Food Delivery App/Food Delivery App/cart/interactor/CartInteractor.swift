@@ -23,7 +23,7 @@ class CartInteractor : PresenterToInteractorCartProtocol{
                 }
                 break
             case .ERROR:
-                print("error")
+                self.presenter?.cartToPresenter(items: self.mergeFoods(foods: [Cart]()))
                 break
             default:
                 break
@@ -51,6 +51,67 @@ class CartInteractor : PresenterToInteractorCartProtocol{
             mergedFoods.append(food)
         }
         return mergedFoods
+    }
+    
+    func deleteCart() {
+        let params:Parameters = ["kullanici_adi":"cemaltysz"]
+        
+        api.getCart(params: params, completionHandler: { response in
+            switch response.status {
+            case .SUCCESS:
+                if let data = response.data?.sepet_yemekler {
+                    for i in data {
+                        let param:Parameters = ["sepet_yemek_id":Int(i.sepet_yemek_id!)!,"kullanici_adi":"cemaltysz"]
+                        self.api.deleteCart(params: param){resp in
+                            if resp.status == .SUCCESS {
+                                print("\(i.sepet_yemek_id!) numaralı sipariş sepetten silindi.")
+                                if i == data.last {
+                                    self.getCart()
+                                }
+                            }
+                        }
+                    }
+                }
+                break
+            case .ERROR:
+                print("error")
+                break
+            default:
+                break
+            }
+        })
+    }
+    
+    func deleteFoodFromCart(foodName: String) {
+        let params:Parameters = ["kullanici_adi":"cemaltysz"]
+        
+        api.getCart(params: params, completionHandler: { response in
+            switch response.status {
+            case .SUCCESS:
+                if let data = response.data?.sepet_yemekler {
+                    for i in data {
+                        print("karşılaştırıldı : \(i.yemek_adi!) - \(foodName)")
+                        if i.yemek_adi!.lowercased() == foodName.lowercased() {
+                            let param:Parameters = ["sepet_yemek_id":Int(i.sepet_yemek_id!)!,"kullanici_adi":"cemaltysz"]
+                            self.api.deleteCart(params: param){resp in
+                                if resp.status == .SUCCESS {
+                                    print("\(i.sepet_yemek_id!) numaralı sipariş sepetten silindi.")
+                                    if i == data.last {
+                                        self.getCart()
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                break
+            case .ERROR:
+                print("error")
+                break
+            default:
+                break
+            }
+        })
     }
     
 }

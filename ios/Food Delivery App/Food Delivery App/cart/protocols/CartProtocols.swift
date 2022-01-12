@@ -11,12 +11,16 @@ protocol ViewToPresenterCartProtocol {
     var view:PresenterToViewCartProtocol? {get set}
     var interactor:PresenterToInteractorCartProtocol? {get set}
     
+    func deleteCart()
+    func deleteFoodFromCart(foodName:String)
     func getTheCart()
 }
 
 protocol PresenterToInteractorCartProtocol {
     var presenter:InteractorToPresenterCartProtocol? {get set}
+    func deleteFoodFromCart(foodName:String)
     func getCart()
+    func deleteCart()
 }
 
 protocol InteractorToPresenterCartProtocol {

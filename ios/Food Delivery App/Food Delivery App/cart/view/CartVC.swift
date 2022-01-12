@@ -43,6 +43,19 @@ class CartVC: UIViewController {
         presenter?.getTheCart()
 
     }
+    @IBAction func deleteCart(_ sender: Any) {
+        let alert = UIAlertController(title: "Silme işlemi", message: "Sepetinizi temizlemek istediğinize emin misiniz ?", preferredStyle: .alert)
+                  
+                   let iptalAction = UIAlertAction(title: "İptal", style: .cancel){ _ in
+                   }
+                   
+                   let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in
+                       self.presenter?.deleteCart()
+                   }
+                   alert.addAction(iptalAction)
+                   alert.addAction(evetAction)
+                   self.present(alert,animated: true)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         presenter?.getTheCart()
@@ -62,10 +75,11 @@ extension CartVC : PresenterToViewCartProtocol {
             self.pageTotalLabel.text = "\(totalPrice)₺"
         }
     }
+    
 }
 
 // CollectionView
-extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource {
+extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource, CartCollectionViewProtocol {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cartList!.count
     }
@@ -74,6 +88,9 @@ extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource {
         
         let currentCart = cartList?[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartCollectionViewCell", for: indexPath) as! CartCollectionViewCell
+        
+        cell.cartCollectionViewProtocol = self
+        cell.indexPath = indexPath
         
         cell.layer.masksToBounds = true
         cell.layer.borderColor = UIColor(named: "Grey200")?.cgColor
@@ -91,5 +108,19 @@ extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    
+    func deleteFood(indexPath: IndexPath) {
+        let selectedFoodName = self.cartList![indexPath.row].yemek_adi!
+        let alert = UIAlertController(title: "Silme işlemi", message: "Sepetinizden \(selectedFoodName) adlı ürünü kaldırmak istediğinize emin misiniz ?", preferredStyle: .alert)
+                  
+                   let iptalAction = UIAlertAction(title: "İptal", style: .cancel){ _ in
+                   }
+                   
+                   let evetAction = UIAlertAction(title: "Evet", style: .destructive){ _ in
+                       self.presenter?.deleteFoodFromCart(foodName: selectedFoodName)
+                   }
+                   alert.addAction(iptalAction)
+                   alert.addAction(evetAction)
+                   self.present(alert,animated: true)
+        
+    }
 }

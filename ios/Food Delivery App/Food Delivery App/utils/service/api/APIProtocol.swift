@@ -15,5 +15,7 @@ protocol APIProtocol {
     func addToCart(params:Parameters,completionHandler: @escaping (Resource<SimpleResponse>) -> Void)
     
     func getCart(params:Parameters,completionHandler: @escaping (Resource<CartResponse>) -> Void)
+    
+    func deleteCart(params:Parameters,completionHandler: @escaping (Resource<SimpleResponse>) -> Void)
 
 }

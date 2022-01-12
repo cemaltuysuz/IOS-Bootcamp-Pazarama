@@ -341,6 +341,9 @@
                     <navigationItem key="navigationItem" title="Sepetim" id="oAS-C7-abH">
                         <barButtonItem key="rightBarButtonItem" title="Tum yemekleri sil" image="trash" catalog="system" id="x5E-3J-4no">
                             <color key="tintColor" name="Black500"/>
+                            <connections>
+                                <action selector="deleteCart:" destination="x2T-W5-OB8" id="ZrV-xO-uKj"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
