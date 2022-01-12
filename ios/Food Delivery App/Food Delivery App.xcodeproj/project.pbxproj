@@ -41,6 +41,11 @@
 		152CA04F278ED94D00A4BA28 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA04E278ED94D00A4BA28 /* UserDefaultProtocol.swift */; };
 		152CA051278ED9DA00A4BA28 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA050278ED9DA00A4BA28 /* Constants.swift */; };
 		152CA053278EDA7000A4BA28 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA052278EDA7000A4BA28 /* UserDefaultService.swift */; };
+		152CA062278EEC5300A4BA28 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 152CA059278EEC5300A4BA28 /* FMDatabaseQueue.m */; };
+		152CA063278EEC5300A4BA28 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 152CA05B278EEC5300A4BA28 /* FMDatabasePool.m */; };
+		152CA064278EEC5300A4BA28 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 152CA05C278EEC5300A4BA28 /* FMResultSet.m */; };
+		152CA065278EEC5300A4BA28 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 152CA05E278EEC5300A4BA28 /* FMDatabase.m */; };
+		152CA066278EEC5300A4BA28 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 152CA061278EEC5300A4BA28 /* FMDatabaseAdditions.m */; };
 		15580984278C9B88006F0D69 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */; };
 		15580986278CA0DD006F0D69 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */; };
 		15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */; };
@@ -105,6 +110,19 @@
 		152CA04E278ED94D00A4BA28 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		152CA050278ED9DA00A4BA28 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		152CA052278EDA7000A4BA28 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		152CA055278EEBE100A4BA28 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		152CA056278EEC5200A4BA28 /* Food Delivery App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Food Delivery App-Bridging-Header.h"; sourceTree = "<group>"; };
+		152CA057278EEC5300A4BA28 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		152CA058278EEC5300A4BA28 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		152CA059278EEC5300A4BA28 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		152CA05A278EEC5300A4BA28 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		152CA05B278EEC5300A4BA28 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		152CA05C278EEC5300A4BA28 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		152CA05D278EEC5300A4BA28 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		152CA05E278EEC5300A4BA28 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		152CA05F278EEC5300A4BA28 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		152CA060278EEC5300A4BA28 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		152CA061278EEC5300A4BA28 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
 		15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
 		15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
@@ -149,6 +167,7 @@
 				1511DAC8278ACF38000938A2 /* Food Delivery AppTests */,
 				1511DAD2278ACF38000938A2 /* Food Delivery AppUITests */,
 				1511DAB0278ACF37000938A2 /* Products */,
+				152CA054278EEBE100A4BA28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,7 +195,19 @@
 				1511DABB278ACF38000938A2 /* Assets.xcassets */,
 				1511DABD278ACF38000938A2 /* LaunchScreen.storyboard */,
 				1511DAC0278ACF38000938A2 /* Info.plist */,
+				152CA057278EEC5300A4BA28 /* FMDatabase.h */,
+				152CA05E278EEC5300A4BA28 /* FMDatabase.m */,
+				152CA05A278EEC5300A4BA28 /* FMDatabaseAdditions.h */,
+				152CA061278EEC5300A4BA28 /* FMDatabaseAdditions.m */,
+				152CA05F278EEC5300A4BA28 /* FMDatabasePool.h */,
+				152CA05B278EEC5300A4BA28 /* FMDatabasePool.m */,
+				152CA058278EEC5300A4BA28 /* FMDatabaseQueue.h */,
+				152CA059278EEC5300A4BA28 /* FMDatabaseQueue.m */,
+				152CA05D278EEC5300A4BA28 /* FMDB.h */,
+				152CA060278EEC5300A4BA28 /* FMResultSet.h */,
+				152CA05C278EEC5300A4BA28 /* FMResultSet.m */,
 				1511DAF7278AE17A000938A2 /* fonts */,
+				152CA056278EEC5200A4BA28 /* Food Delivery App-Bridging-Header.h */,
 			);
 			path = "Food Delivery App";
 			sourceTree = "<group>";
@@ -504,6 +535,14 @@
 			path = userdefault;
 			sourceTree = "<group>";
 		};
+		152CA054278EEBE100A4BA28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				152CA055278EEBE100A4BA28 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -576,6 +615,7 @@
 				TargetAttributes = {
 					1511DAAE278ACF37000938A2 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					1511DAC4278ACF38000938A2 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -649,6 +689,7 @@
 				1511DAB3278ACF37000938A2 /* AppDelegate.swift in Sources */,
 				1511DB0C278B2948000938A2 /* FoodPresenter.swift in Sources */,
 				15580984278C9B88006F0D69 /* FoodDetailProtocols.swift in Sources */,
+				152CA065278EEC5300A4BA28 /* FMDatabase.m in Sources */,
 				1558098A278CA104006F0D69 /* FoodDetailRouter.swift in Sources */,
 				15158AFC278DFC6200F11D93 /* CartProtocols.swift in Sources */,
 				152CA051278ED9DA00A4BA28 /* Constants.swift in Sources */,
@@ -662,18 +703,22 @@
 				1511DAFF278AEDBA000938A2 /* FoodTableViewCell.swift in Sources */,
 				1511DB19278B46D1000938A2 /* API.swift in Sources */,
 				15158AF7278DF56900F11D93 /* CartVC.swift in Sources */,
+				152CA063278EEC5300A4BA28 /* FMDatabasePool.m in Sources */,
 				15930140278DD09B003C9A20 /* CustomAlert.swift in Sources */,
 				1511DB02278AEEBC000938A2 /* FoodVC.swift in Sources */,
 				152CA053278EDA7000A4BA28 /* UserDefaultService.swift in Sources */,
 				1593013E278DCF15003C9A20 /* CartResponse.swift in Sources */,
 				1558098E278CA74A006F0D69 /* SimpleResponse.swift in Sources */,
+				152CA066278EEC5300A4BA28 /* FMDatabaseAdditions.m in Sources */,
 				15158B02278DFE7100F11D93 /* CartRouter.swift in Sources */,
 				15158AFA278DF60C00F11D93 /* CartCollectionViewCell.swift in Sources */,
 				15580986278CA0DD006F0D69 /* FoodDetailInteractor.swift in Sources */,
 				15158B00278DFE3F00F11D93 /* CartPresenter.swift in Sources */,
+				152CA062278EEC5300A4BA28 /* FMDatabaseQueue.m in Sources */,
 				1511DB17278B3EEA000938A2 /* Resource.swift in Sources */,
 				1511DB0E278B2AC3000938A2 /* FoodRouter.swift in Sources */,
 				1511DB06278AEFDD000938A2 /* Yemekler.swift in Sources */,
+				152CA064278EEC5300A4BA28 /* FMResultSet.m in Sources */,
 				1511DB28278B7CD9000938A2 /* FoodDetailVC.swift in Sources */,
 				15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */,
 				1593013C278DCE64003C9A20 /* Cart.swift in Sources */,
@@ -853,6 +898,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34WTB4U8S7;
@@ -871,6 +917,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.Food-Delivery-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Food Delivery App/Food Delivery App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -881,6 +929,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34WTB4U8S7;
@@ -899,6 +948,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "thicapps.Food-Delivery-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Food Delivery App/Food Delivery App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
