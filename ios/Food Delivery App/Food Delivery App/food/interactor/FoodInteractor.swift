@@ -15,28 +15,31 @@ class FoodInteractor : PresenterToInteractorFood {
     
     func getFoods() {
         let downloadTime = ud.getSaveTimeForFoods()
-        
         if downloadTime == 0 {
             getFoodFromAPI()
             return
         }else {
             if(currentTimeInMilliSeconds() - downloadTime < Int(Constants.FOOD_REFRESH_TIME)) {
-                dao.getFoods(completionHandler: { data in
-                    self.presenter?.indicatorVisibility(bool: false)
-                    if data.count > 0 {
-                        print("Veriler veritabanından geldi")
-                        self.presenter?.foodsToPresenter(yemekler: data)
-                    }
-                    
-                })
+                getFoodFromDatabase()
             }else {
                 getFoodFromAPI()
             }
         }
     }
+    /**
+     Kullanıcı yemek aradığı  zaman bu method çalışacak. Kullanıcının search bar üzerinde girdiği metnin
+     boş olup olmadığını view katmanında kontrol ediyorum. Bu kısımda aradığı yemek veritabanında olmayabilir
+     bu yuzden donen listenin boş olup olmadığını kontrol ediyorum. Eğer boş ise veri bulunamadı resmini kullanıcıya göstereceğim.
+     */
         
     func searchFood(searchText: String) {
-        print(searchText)
+        dao.searchFood(searchText: searchText, completionHandler: { data in
+            if data.count > 0 {
+                self.presenter?.foodsToPresenter(yemekler: data)
+            }else {
+                print("Bu kısımda kullanıcıya data bulunamadı hatası gösterilecek")
+            }
+        })
     }
     
     /**
@@ -73,7 +76,14 @@ class FoodInteractor : PresenterToInteractorFood {
     }
     
     func getFoodFromDatabase(){
-        
+        dao.getFoods(completionHandler: { data in
+            self.presenter?.indicatorVisibility(bool: false)
+            if data.count > 0 {
+                print("Veriler veritabanından geldi")
+                self.presenter?.foodsToPresenter(yemekler: data)
+            }
+            
+        })
     }
     
     func currentTimeInMilliSeconds()-> Int

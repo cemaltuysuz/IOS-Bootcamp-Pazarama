@@ -45,12 +45,9 @@ class DAO : DAOProtocol {
     
     func getFoods(completionHandler: @escaping ([Yemekler]) -> Void) {
         var foodList = [Yemekler]()
-               
                db?.open()
-               
                do{
                    let c = try db!.executeQuery("SELECT * FROM Food", values: nil)
-                   
                    while c.next() {
                        let food = Yemekler(yemek_id: c.string(forColumn: "yemek_id")!,
                                            yemek_adi: c.string(forColumn: "yemek_adi")!,
@@ -70,7 +67,6 @@ class DAO : DAOProtocol {
         var foodList = [Yemekler]()
                
         db?.open()
-                
                 do{
                     let c = try db!.executeQuery("SELECT * FROM Food WHERE Food.yemek_adi  like '%\(searchText)%'", values: nil)
                     

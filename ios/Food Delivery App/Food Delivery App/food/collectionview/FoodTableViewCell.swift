@@ -29,4 +29,10 @@ class FoodTableViewCell: UITableViewCell {
         
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 5, bottom: 5, right: 5))
+    }
+    
 }

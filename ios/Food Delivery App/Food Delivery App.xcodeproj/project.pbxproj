@@ -18,7 +18,6 @@
 		1511DAFB278AE1AE000938A2 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1511DAF8278AE1AE000938A2 /* Manrope-Regular.ttf */; };
 		1511DAFC278AE1AE000938A2 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1511DAF9278AE1AE000938A2 /* Manrope-Medium.ttf */; };
 		1511DAFD278AE1AE000938A2 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1511DAFA278AE1AE000938A2 /* Manrope-Bold.ttf */; };
-		1511DAFF278AEDBA000938A2 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DAFE278AEDBA000938A2 /* FoodTableViewCell.swift */; };
 		1511DB02278AEEBC000938A2 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB01278AEEBC000938A2 /* FoodVC.swift */; };
 		1511DB04278AEEE1000938A2 /* FoodProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB03278AEEE1000938A2 /* FoodProtocols.swift */; };
 		1511DB06278AEFDD000938A2 /* Yemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511DB05278AEFDD000938A2 /* Yemekler.swift */; };
@@ -49,6 +48,7 @@
 		152CA068278F19A100A4BA28 /* FoodDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 152CA067278F19A100A4BA28 /* FoodDB.sqlite */; };
 		152CA06B278F1B3500A4BA28 /* DAOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA06A278F1B3500A4BA28 /* DAOProtocol.swift */; };
 		152CA06D278F1B4500A4BA28 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA06C278F1B4500A4BA28 /* DAO.swift */; };
+		152CA06F27904BE800A4BA28 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA06E27904BE800A4BA28 /* FoodCollectionViewCell.swift */; };
 		15580984278C9B88006F0D69 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */; };
 		15580986278CA0DD006F0D69 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */; };
 		15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */; };
@@ -92,7 +92,6 @@
 		1511DAF8278AE1AE000938A2 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
 		1511DAF9278AE1AE000938A2 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
 		1511DAFA278AE1AE000938A2 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
-		1511DAFE278AEDBA000938A2 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		1511DB01278AEEBC000938A2 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 		1511DB03278AEEE1000938A2 /* FoodProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodProtocols.swift; sourceTree = "<group>"; };
 		1511DB05278AEFDD000938A2 /* Yemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yemekler.swift; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		152CA067278F19A100A4BA28 /* FoodDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = FoodDB.sqlite; sourceTree = "<group>"; };
 		152CA06A278F1B3500A4BA28 /* DAOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOProtocol.swift; sourceTree = "<group>"; };
 		152CA06C278F1B4500A4BA28 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		152CA06E27904BE800A4BA28 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
 		15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
 		15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		1511DAE2278AD3E2000938A2 /* food */ = {
 			isa = PBXGroup;
 			children = (
-				1511DB00278AEDC7000938A2 /* tableview */,
+				1511DB00278AEDC7000938A2 /* collectionview */,
 				1511DAEA278AD481000938A2 /* protocols */,
 				1511DAE5278AD42C000938A2 /* view */,
 				1511DAE7278AD443000938A2 /* interactor */,
@@ -427,12 +427,12 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		1511DB00278AEDC7000938A2 /* tableview */ = {
+		1511DB00278AEDC7000938A2 /* collectionview */ = {
 			isa = PBXGroup;
 			children = (
-				1511DAFE278AEDBA000938A2 /* FoodTableViewCell.swift */,
+				152CA06E27904BE800A4BA28 /* FoodCollectionViewCell.swift */,
 			);
-			path = tableview;
+			path = collectionview;
 			sourceTree = "<group>";
 		};
 		1511DB0F278B3D99000938A2 /* utils */ = {
@@ -718,7 +718,7 @@
 				1511DB08278AF0D3000938A2 /* YemeklerCevap.swift in Sources */,
 				1511DB04278AEEE1000938A2 /* FoodProtocols.swift in Sources */,
 				15158AFE278DFE0700F11D93 /* CartInteractor.swift in Sources */,
-				1511DAFF278AEDBA000938A2 /* FoodTableViewCell.swift in Sources */,
+				152CA06F27904BE800A4BA28 /* FoodCollectionViewCell.swift in Sources */,
 				1511DB19278B46D1000938A2 /* API.swift in Sources */,
 				15158AF7278DF56900F11D93 /* CartVC.swift in Sources */,
 				152CA063278EEC5300A4BA28 /* FMDatabasePool.m in Sources */,
