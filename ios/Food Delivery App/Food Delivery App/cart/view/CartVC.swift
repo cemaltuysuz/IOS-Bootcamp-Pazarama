@@ -41,8 +41,16 @@ class CartVC: UIViewController {
         cartCollectionView.collectionViewLayout = design
         
         presenter?.getTheCart()
-
+        
+        DispatchQueue.main.async {
+            DAO.shared.getFoods(completionHandler: { response in
+                print(response.count)
+                
+            })
+        }
+        
     }
+    
     @IBAction func deleteCart(_ sender: Any) {
         let alert = UIAlertController(title: "Silme işlemi", message: "Sepetinizi temizlemek istediğinize emin misiniz ?", preferredStyle: .alert)
                   
@@ -59,6 +67,13 @@ class CartVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         presenter?.getTheCart()
+        
+        DispatchQueue.main.async {
+            DAO.shared.getFoods(completionHandler: { response in
+                print(response.count)
+                
+            })
+        }
     }
 }
 

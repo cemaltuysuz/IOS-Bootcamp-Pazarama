@@ -21,18 +21,32 @@ class FoodVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        UserDefaultService.shared.addToCart(foodId: 1, key: "")
-                
+                        
         FoodRouter.createModule(ref: self)
         
         searchBar.delegate = self
         foodsTableView.delegate = self
         foodsTableView.dataSource = self
         
+        databaseCopy()
+        presenter?.getAllFoods()         
+    }
+    
+    
+    func databaseCopy(){
+        let bundlePath = Bundle.main.path(forResource: "FoodDB", ofType: ".sqlite")
+        let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let copyPath = URL(fileURLWithPath: targetPath).appendingPathComponent("FoodDB.sqlite")
+        let fileManager = FileManager.default
         
-        presenter?.getAllFoods()
-                
+        if fileManager.fileExists(atPath: copyPath.path){
+            print("Database is exists")
+        }else {
+            do{
+                try fileManager.copyItem(atPath: bundlePath!, toPath: copyPath.path)
+            }catch{}
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,6 +96,7 @@ extension FoodVC : PresenterToViewFood {
         
     }
 }
+
 
 // TableView
 extension FoodVC : UITableViewDelegate, UITableViewDataSource {

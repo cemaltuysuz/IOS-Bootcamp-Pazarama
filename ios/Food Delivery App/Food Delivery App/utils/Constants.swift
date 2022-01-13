@@ -9,6 +9,6 @@ import Foundation
 
 class Constants {
     
-    // UserDefault Constants
-    static let CART_KEY = "myCart"
+    static let FOOD_REFRESH_KEY = "foodRefresh"
+    static let FOOD_REFRESH_TIME = 20000
 }

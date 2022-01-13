@@ -8,8 +8,7 @@
 import Foundation
 
 protocol UserDefaultProtocol {
-    
-    func addToCart(foodId:Int,key:String)
-    
-    func getTheBasket(key:String)
+            
+    func saveTimeForFoods(time:Int)
+    func getSaveTimeForFoods() -> Int
 }

@@ -8,21 +8,16 @@
 import Foundation
 
 class UserDefaultService : UserDefaultProtocol {
-    static let shared = UserDefaultService()
     
+    static let shared = UserDefaultService()
     private let ud = UserDefaults.standard
     
-    func addToCart(foodId: Int, key: String) {
-        if let currentDictionary = ud.dictionary(forKey: Constants.CART_KEY) {
-            
-        }else {
-            print("veri yok")
-        }
+    
+    func saveTimeForFoods(time: Int) {
+        ud.set(time, forKey: Constants.FOOD_REFRESH_KEY)
     }
     
-    func getTheBasket(key: String) {
-        print("bos")
+    func getSaveTimeForFoods() -> Int {
+        return ud.integer(forKey: Constants.FOOD_REFRESH_KEY)
     }
-    
-    
 }
