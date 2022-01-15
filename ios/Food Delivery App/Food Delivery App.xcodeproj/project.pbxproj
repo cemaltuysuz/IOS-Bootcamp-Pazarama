@@ -51,8 +51,9 @@
 		152CA06F27904BE800A4BA28 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA06E27904BE800A4BA28 /* FoodCollectionViewCell.swift */; };
 		152CA0732792C48E00A4BA28 /* OnBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA0722792C48E00A4BA28 /* OnBoardVC.swift */; };
 		152CA0772792C4F500A4BA28 /* OnBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA0752792C4F500A4BA28 /* OnBoardCollectionViewCell.swift */; };
-		152CA0782792C4F500A4BA28 /* OnBoardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152CA0762792C4F500A4BA28 /* OnBoardCollectionViewCell.xib */; };
 		152CA07C2792C78C00A4BA28 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152CA07B2792C78C00A4BA28 /* Page.swift */; };
+		152CA07F2792D35500A4BA28 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 152CA07E2792D35500A4BA28 /* Lottie */; };
+		154F7C082792F936001F0F93 /* success_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 154F7C072792F936001F0F93 /* success_anim.json */; };
 		15580984278C9B88006F0D69 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */; };
 		15580986278CA0DD006F0D69 /* FoodDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */; };
 		15580988278CA0EC006F0D69 /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */; };
@@ -61,6 +62,9 @@
 		1593013C278DCE64003C9A20 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1593013B278DCE64003C9A20 /* Cart.swift */; };
 		1593013E278DCF15003C9A20 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1593013D278DCF15003C9A20 /* CartResponse.swift */; };
 		15930140278DD09B003C9A20 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1593013F278DD09B003C9A20 /* CustomAlert.swift */; };
+		15F68A9E2792E6FD00070DDB /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = 15F68A9B2792E6FD00070DDB /* animation1.json */; };
+		15F68AA02792E6FD00070DDB /* animation2.json in Resources */ = {isa = PBXBuildFile; fileRef = 15F68A9D2792E6FD00070DDB /* animation2.json */; };
+		15F68AA22792EDFF00070DDB /* animation3.json in Resources */ = {isa = PBXBuildFile; fileRef = 15F68AA12792EDFF00070DDB /* animation3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,8 +139,8 @@
 		152CA06E27904BE800A4BA28 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		152CA0722792C48E00A4BA28 /* OnBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVC.swift; sourceTree = "<group>"; };
 		152CA0752792C4F500A4BA28 /* OnBoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardCollectionViewCell.swift; sourceTree = "<group>"; };
-		152CA0762792C4F500A4BA28 /* OnBoardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardCollectionViewCell.xib; sourceTree = "<group>"; };
 		152CA07B2792C78C00A4BA28 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		154F7C072792F936001F0F93 /* success_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_anim.json; sourceTree = "<group>"; };
 		15580983278C9B87006F0D69 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
 		15580985278CA0DD006F0D69 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
 		15580987278CA0EC006F0D69 /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
@@ -145,6 +149,9 @@
 		1593013B278DCE64003C9A20 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		1593013D278DCF15003C9A20 /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
 		1593013F278DD09B003C9A20 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		15F68A9B2792E6FD00070DDB /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation1.json; sourceTree = "<group>"; };
+		15F68A9D2792E6FD00070DDB /* animation2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation2.json; sourceTree = "<group>"; };
+		15F68AA12792EDFF00070DDB /* animation3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = animation3.json; path = ../../../../../../Downloads/animation3.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +161,7 @@
 			files = (
 				1511DB1F278B64B4000938A2 /* Kingfisher in Frameworks */,
 				1511DB1C278B495A000938A2 /* Alamofire in Frameworks */,
+				152CA07F2792D35500A4BA28 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +230,7 @@
 				152CA05D278EEC5300A4BA28 /* FMDB.h */,
 				152CA060278EEC5300A4BA28 /* FMResultSet.h */,
 				152CA05C278EEC5300A4BA28 /* FMResultSet.m */,
+				15F68A9A2792E6E100070DDB /* Lottie */,
 				1511DAF7278AE17A000938A2 /* fonts */,
 				152CA056278EEC5200A4BA28 /* Food Delivery App-Bridging-Header.h */,
 			);
@@ -591,7 +600,6 @@
 			isa = PBXGroup;
 			children = (
 				152CA0752792C4F500A4BA28 /* OnBoardCollectionViewCell.swift */,
-				152CA0762792C4F500A4BA28 /* OnBoardCollectionViewCell.xib */,
 			);
 			path = collectionview;
 			sourceTree = "<group>";
@@ -602,6 +610,17 @@
 				152CA07B2792C78C00A4BA28 /* Page.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		15F68A9A2792E6E100070DDB /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				154F7C072792F936001F0F93 /* success_anim.json */,
+				15F68AA12792EDFF00070DDB /* animation3.json */,
+				15F68A9B2792E6FD00070DDB /* animation1.json */,
+				15F68A9D2792E6FD00070DDB /* animation2.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,6 +642,7 @@
 			packageProductDependencies = (
 				1511DB1B278B495A000938A2 /* Alamofire */,
 				1511DB1E278B64B4000938A2 /* Kingfisher */,
+				152CA07E2792D35500A4BA28 /* Lottie */,
 			);
 			productName = "Food Delivery App";
 			productReference = 1511DAAF278ACF37000938A2 /* Food Delivery App.app */;
@@ -700,6 +720,7 @@
 			packageReferences = (
 				1511DB1A278B495A000938A2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1511DB1D278B64B4000938A2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				152CA07D2792D35500A4BA28 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 1511DAB0278ACF37000938A2 /* Products */;
 			projectDirPath = "";
@@ -717,14 +738,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F68A9E2792E6FD00070DDB /* animation1.json in Resources */,
 				1511DAFB278AE1AE000938A2 /* Manrope-Regular.ttf in Resources */,
+				15F68AA22792EDFF00070DDB /* animation3.json in Resources */,
 				1511DABF278ACF38000938A2 /* LaunchScreen.storyboard in Resources */,
-				152CA0782792C4F500A4BA28 /* OnBoardCollectionViewCell.xib in Resources */,
 				1511DABC278ACF38000938A2 /* Assets.xcassets in Resources */,
+				154F7C082792F936001F0F93 /* success_anim.json in Resources */,
 				1511DABA278ACF37000938A2 /* Main.storyboard in Resources */,
 				1511DAFD278AE1AE000938A2 /* Manrope-Bold.ttf in Resources */,
 				1511DAFC278AE1AE000938A2 /* Manrope-Medium.ttf in Resources */,
 				152CA068278F19A100A4BA28 /* FoodDB.sqlite in Resources */,
+				15F68AA02792E6FD00070DDB /* animation2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,6 +1176,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		152CA07D2792D35500A4BA28 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1164,6 +1196,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1511DB1D278B64B4000938A2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		152CA07E2792D35500A4BA28 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 152CA07D2792D35500A4BA28 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class OnBoardCollectionViewCell: UICollectionViewCell {
     
@@ -13,12 +14,9 @@ class OnBoardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    var animation = AnimationView()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    func configureCell(page:Page) {
-        
     }
 }

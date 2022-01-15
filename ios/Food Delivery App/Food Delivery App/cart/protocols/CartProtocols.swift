@@ -14,6 +14,8 @@ protocol ViewToPresenterCartProtocol {
     func deleteCart()
     func deleteFoodFromCart(foodName:String)
     func getTheCart()
+    func increaseAmount(cartId:Int)
+    func reduceAmount(cartId:Int)
 }
 
 protocol PresenterToInteractorCartProtocol {
@@ -21,6 +23,8 @@ protocol PresenterToInteractorCartProtocol {
     func deleteFoodFromCart(foodName:String)
     func getCart()
     func deleteCart()
+    func increaseAmount(cartId:Int)
+    func reduceAmount(cartId:Int)
 }
 
 protocol InteractorToPresenterCartProtocol {

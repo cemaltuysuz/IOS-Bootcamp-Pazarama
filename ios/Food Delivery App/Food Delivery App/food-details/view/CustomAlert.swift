@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class MyAlert {
     
@@ -15,6 +16,7 @@ class MyAlert {
     }
     
     private var myTargetView : UIView?
+    private var anim:AnimationView?
     
     private let backgroundView:UIView = {
         let backgroundView = UIView()
@@ -60,18 +62,10 @@ class MyAlert {
         titleLabel.textAlignment = .center
         alertView.addSubview(titleLabel)
         
-        // Message Label Design
-        let messageLabel = UILabel(
-            frame: CGRect(
-                x: 0,
-                y: 80,
-                width: alertView.frame.size.width,
-                height: 30)
-        )
-        messageLabel.text = message
-        messageLabel.textAlignment = .left
-        messageLabel.numberOfLines = 0
-        alertView.addSubview(messageLabel)
+        anim = AnimationView(name: "success_anim")
+        anim!.frame = CGRect(x: 70, y: 70, width: 200, height: 200)
+        
+        alertView.addSubview(self.anim!)
         
         // Ok Button
         let button = UIButton(frame: CGRect( x: 0,
@@ -84,6 +78,7 @@ class MyAlert {
         button.addTarget(self,
                          action: #selector(self.dismissAlert),
                          for: .touchUpInside)
+        
         alertView.addSubview(button)
         
         
@@ -97,6 +92,9 @@ class MyAlert {
             if done {
                 UIView.animate(withDuration: 0.25, animations: {
                     self.alertView.center = targetView.center
+                    self.anim?.animationSpeed = 1
+                    self.anim?.loopMode = .loop
+                    self.anim?.play()
                 })
             }
             
@@ -120,6 +118,7 @@ class MyAlert {
                     self.backgroundView.alpha = 0
                     
                 },completion: { done in
+                    self.anim?.stop()
                     self.alertView.removeFromSuperview()
                     self.backgroundView.removeFromSuperview()
                     

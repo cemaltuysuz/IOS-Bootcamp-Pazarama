@@ -19,13 +19,17 @@ class CartCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var totalPriceFood: UILabel!
     
     @IBAction func reduceAmountCart(_ sender: Any) {
-        
+        if let index = indexPath {
+            cartCollectionViewProtocol?.reduceAmount(indexPath: index)
+        }
     }
     
     @IBOutlet weak var foodAmountCart: UILabel!
     
     @IBAction func increaseAmountCart(_ sender: Any) {
-        
+        if let index = indexPath {
+            cartCollectionViewProtocol?.increaseAmount(indexPath: index)
+        }
     }
     
     @IBAction func deleteFoodFromCart(_ sender: Any) {
@@ -37,4 +41,6 @@ class CartCollectionViewCell: UICollectionViewCell {
 
 protocol CartCollectionViewProtocol {
     func deleteFood(indexPath:IndexPath)
+    func increaseAmount(indexPath:IndexPath)
+    func reduceAmount(indexPath:IndexPath)
 }

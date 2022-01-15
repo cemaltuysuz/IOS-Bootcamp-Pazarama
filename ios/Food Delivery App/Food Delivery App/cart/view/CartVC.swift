@@ -34,20 +34,13 @@ class CartVC: UIViewController {
         // Itemlerin yataydaki bosluklari
         design.minimumInteritemSpacing = 10
         // Dikeyde boşluklar
-        design.minimumLineSpacing = 10
+        design.minimumLineSpacing = 25
         
         design.itemSize = CGSize(width: 160, height: 250)
                
         cartCollectionView.collectionViewLayout = design
         
         presenter?.getTheCart()
-        
-        DispatchQueue.main.async {
-            DAO.shared.getFoods(completionHandler: { response in
-                print(response.count)
-                
-            })
-        }
         
     }
     
@@ -95,6 +88,14 @@ extension CartVC : PresenterToViewCartProtocol {
 
 // CollectionView
 extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource, CartCollectionViewProtocol {
+    func increaseAmount(indexPath: IndexPath) {
+        presenter?.increaseAmount(cartId: Int(cartList![indexPath.row].sepet_yemek_id!)!)
+    }
+    
+    func reduceAmount(indexPath: IndexPath) {
+        presenter?.reduceAmount(cartId: Int(cartList![indexPath.row].sepet_yemek_id!)!)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cartList!.count
     }

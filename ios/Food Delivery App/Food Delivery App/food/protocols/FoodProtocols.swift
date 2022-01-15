@@ -26,13 +26,11 @@ protocol InteractorToPresenterFood {
     func foodsToPresenter(yemekler:[Yemekler])
     func indicatorVisibility(bool:Bool)
     
-    func searchResults(results:[Yemekler])
 }
 
 protocol PresenterToViewFood {
     func foodsToView(yemekler:[Yemekler])
     func indicatorVisibility(bool:Bool)
-    func searchResults(results:[Yemekler])
 }
 
 protocol PresenterToRouterFood {

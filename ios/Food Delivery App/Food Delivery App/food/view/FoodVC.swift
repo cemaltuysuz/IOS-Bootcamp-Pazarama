@@ -11,11 +11,12 @@ import Kingfisher
 class FoodVC: UIViewController {
 
     var yemekler = [Yemekler]()
-    var presenter: ViewToPresenterFood?
+    var presenter: ViewToPresenterFood? // Presenter
+    
     private var pendingRequestWorkItem: DispatchWorkItem?
     
+    // Views
     @IBOutlet weak var foodCollectionView: UICollectionView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var dataNotFoundLabel: UILabel!
     @IBOutlet weak var foodIndicator: UIActivityIndicatorView!
@@ -26,30 +27,30 @@ class FoodVC: UIViewController {
         
         FoodRouter.createModule(ref: self)
         
-        // Food CollectionView Design
+        // UICollectionView Design
         let design = UICollectionViewFlowLayout()
-        // Çevre Boşluklarının oluşturulması
-        design.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        // Itemlerin yataydaki bosluklari
+        design.sectionInset = UIEdgeInsets(top: 0,
+                                           left: 0,
+                                           bottom: 0,
+                                           right: 0)
         design.minimumInteritemSpacing = 0
-        // Dikeyde boşluklar
         design.minimumLineSpacing = 15
-        
         let cellWidht = foodCollectionView.frame.width
         design.itemSize = CGSize(width: cellWidht, height: 150)
-        
         foodCollectionView.collectionViewLayout = design
         
+        // Delegate
         searchBar.delegate = self
         foodCollectionView.delegate = self
         foodCollectionView.dataSource = self
         
-        
-        databaseCopy()
-        presenter?.getAllFoods()         
+        databaseCopy() // SQLite Database Copy to local storage
+        presenter?.getAllFoods() // get data
     }
     
-    
+    /*
+     With this function, I copy the previously created sqlite database to local storage.
+     */
     func databaseCopy(){
         let bundlePath = Bundle.main.path(forResource: "FoodDB", ofType: ".sqlite")
         let targetPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -79,11 +80,13 @@ class FoodVC: UIViewController {
 
 extension FoodVC : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // Cancel previous work when user input data.
         pendingRequestWorkItem?.cancel()
         
         let requestWorkItem = DispatchWorkItem { [weak self] in
                 self?.presenter?.searchFood(searchText: searchText)
         }
+        // I created a work with 250 millisecond delay.
         pendingRequestWorkItem = requestWorkItem
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250),
                                               execute: requestWorkItem)
@@ -110,14 +113,10 @@ extension FoodVC : PresenterToViewFood {
             self.foodCollectionView.reloadData()
         }
     }
-    
-    func searchResults(results: [Yemekler]) {
-        
-    }
 }
 
 
-// TableView
+// CollectionView
 extension FoodVC : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return yemekler.count
@@ -135,18 +134,7 @@ extension FoodVC : UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
-       // cell.contentView.layer.borderWidth = 1
-       // cell.contentView.layer.borderColor = UIColor(named: "Red100")?.cgColor
-        
-        /*
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 1, height: 2.0)
-        cell.layer.shadowRadius = 2.0
-        cell.layer.shadowOpacity = 0.2
-        cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-        */
-        
+
         return cell
     }
     

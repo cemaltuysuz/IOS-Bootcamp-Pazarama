@@ -55,7 +55,7 @@
             <connections>
                 <outlet property="animationContainer" destination="GJ0-mz-5pC" id="ebY-4d-HJf"/>
                 <outlet property="descriptionTextView" destination="R8h-Gt-shG" id="qjj-Zk-i9P"/>
-                <outlet property="titleLabel" destination="Yt4-4J-eKZ" id="v84-qQ-nMj"/>
+                <outlet property="titleLabel" destination="Yt4-4J-eKZ" id="2Mz-Ia-LdW"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </collectionViewCell>
