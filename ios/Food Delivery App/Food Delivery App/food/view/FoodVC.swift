@@ -44,9 +44,14 @@ class FoodVC: UIViewController {
         foodCollectionView.delegate = self
         foodCollectionView.dataSource = self
         
-        databaseCopy() // SQLite Database Copy to local storage
-        presenter?.getAllFoods() // get data
+        databaseCopy()
+        presenter?.getAllFoods()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.getAllFoods()
+    }
+    
     
     /*
      With this function, I copy the previously created sqlite database to local storage.

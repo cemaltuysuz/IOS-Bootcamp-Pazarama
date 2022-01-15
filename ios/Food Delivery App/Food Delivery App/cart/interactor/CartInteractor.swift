@@ -113,5 +113,12 @@ class CartInteractor : PresenterToInteractorCartProtocol{
             }
         })
     }
+    func increaseAmount(cartId: Int) {
+        print("\(cartId) numaralı ürünü 1 arttır")
+    }
+    func reduceAmount(cartId: Int) {
+        print("\(cartId) numaralı ürünü 1 azalt")
+    }
+    
     
 }

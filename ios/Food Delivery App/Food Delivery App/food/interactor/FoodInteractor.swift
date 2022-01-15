@@ -47,7 +47,7 @@ class FoodInteractor : PresenterToInteractorFood {
      */
     
     func getFoodFromAPI(){
-        print("Süre geçti veriler API üzerinden gelecek.")
+        print("From API.")
         api.allFoods{ response in
             switch response.status {
             case .SUCCESS :
@@ -79,7 +79,7 @@ class FoodInteractor : PresenterToInteractorFood {
         dao.getFoods(completionHandler: { data in
             self.presenter?.indicatorVisibility(bool: false)
             if data.count > 0 {
-                print("Veriler veritabanından geldi")
+                print("From Database")
                 self.presenter?.foodsToPresenter(yemekler: data)
             }
             

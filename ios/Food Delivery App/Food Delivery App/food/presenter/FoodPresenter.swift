@@ -26,8 +26,5 @@ class FoodPresenter : InteractorToPresenterFood,ViewToPresenterFood {
     func searchFood(searchText: String) {
         interactor?.searchFood(searchText: searchText)
     }
-    func searchResults(results: [Yemekler]) {
-        view?.searchResults(results: results)
-    }
     
 }
