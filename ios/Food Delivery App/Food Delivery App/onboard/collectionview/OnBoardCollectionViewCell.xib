@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onBoardCollectionViewCell" id="gTV-IL-0wX" customClass="OnBoardCollectionViewCell" customModule="Food_Delivery_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJ0-mz-5pC">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="480"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt4-4J-eKZ">
+                        <rect key="frame" x="20" y="494" width="260" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R8h-Gt-shG">
+                        <rect key="frame" x="20" y="532" width="260" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="XZh-EC-N8w"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Yt4-4J-eKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="48w-SV-gqa"/>
+                <constraint firstItem="R8h-Gt-shG" firstAttribute="top" secondItem="Yt4-4J-eKZ" secondAttribute="bottom" constant="8" symbolic="YES" id="4BK-5P-a9t"/>
+                <constraint firstItem="GJ0-mz-5pC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FOz-sv-PFu"/>
+                <constraint firstAttribute="trailing" secondItem="R8h-Gt-shG" secondAttribute="trailing" constant="20" id="bhU-wN-a4p"/>
+                <constraint firstAttribute="bottom" secondItem="R8h-Gt-shG" secondAttribute="bottom" constant="20" id="ezl-Lg-WIG"/>
+                <constraint firstAttribute="trailing" secondItem="Yt4-4J-eKZ" secondAttribute="trailing" constant="20" id="q3H-ZZ-S8Y"/>
+                <constraint firstItem="GJ0-mz-5pC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rly-pf-1j3"/>
+                <constraint firstItem="Yt4-4J-eKZ" firstAttribute="centerX" secondItem="GJ0-mz-5pC" secondAttribute="centerX" id="tq6-2b-zOa"/>
+                <constraint firstItem="Yt4-4J-eKZ" firstAttribute="top" secondItem="GJ0-mz-5pC" secondAttribute="bottom" constant="14" id="uCA-Me-WjF"/>
+                <constraint firstItem="R8h-Gt-shG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="z5i-p1-qrw"/>
+            </constraints>
+            <connections>
+                <outlet property="animationContainer" destination="GJ0-mz-5pC" id="ebY-4d-HJf"/>
+                <outlet property="descriptionTextView" destination="R8h-Gt-shG" id="qjj-Zk-i9P"/>
+                <outlet property="titleLabel" destination="Yt4-4J-eKZ" id="v84-qQ-nMj"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

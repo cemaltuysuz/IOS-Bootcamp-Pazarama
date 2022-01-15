@@ -108,9 +108,15 @@ extension CartVC :  UICollectionViewDelegate, UICollectionViewDataSource, CartCo
         cell.indexPath = indexPath
         
         cell.layer.masksToBounds = true
-        cell.layer.borderColor = UIColor(named: "Grey200")?.cgColor
-        cell.layer.borderWidth = 1
+        //cell.layer.borderColor = UIColor(named: "Grey200")?.cgColor
+        //cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5
+        
+       // cell.contentView.layer.borderWidth = 1
+       // cell.contentView.layer.borderColor = UIColor(named: "Red100")?.cgColor
+        
+        
+        
         
         if let cart = currentCart {
             cell.foodNameFromCart.text = cart.yemek_adi
